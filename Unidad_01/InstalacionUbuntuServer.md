@@ -64,19 +64,32 @@ Esto lo iremos viendo a lo largo del curso, por ahora tan solo nos preocuparemos
 
 ### Disco de arranque de la MV ###
 
-Seleccionamos la imágen *ISO* de Ubuntu Server que tenemos.
+Seleccionamos la imágen *ISO* de Ubuntu Server que tenemos. 
 
 ![UbuntuServer_8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
 
 ----
 
-### Iniciando la mV ###
+## Instalación de Ubuntu Server ## 
 
+Ahora lo que haremos será instalar Ubuntu Server en la MV que hemos preparado.
+
+### Iniciando la MV ###
+
+Aparecen algunas opciones adicionales que no habiamos visto cuando arrancamos la *desktop*.
 
 ![UbuntuServer_9](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_9.PNG)
 
+## Proceso de instalación ## 
+
+Si seleccionamos un idioma que no está *totalmente* soportado durante la instalación, el proceso de instalación nos avisa de que es posible que hayan cosas que no salgan en la lengua elegida. En este caso lo que haremos será:
+
+* Elegir *Español*
 
 ![UbuntuServer_10](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_10.PNG)
+
+### Configuración del teclado ### 
+
 ![UbuntuServer_11](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_11.PNG)
 ![UbuntuServer_12](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_12.PNG)
 ![UbuntuServer_13](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_13.PNG)
