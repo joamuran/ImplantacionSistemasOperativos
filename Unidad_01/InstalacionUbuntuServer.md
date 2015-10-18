@@ -46,11 +46,36 @@ Lo *dejaremos crecer* hasta **20GB**
 
 ### Red de la MV ###
 
-Esta máquina virtual va a tener algo diferente a la anterior, a la *ubuntuDesktop*, la idea es que esta máquina esté conectada a dos redes, una la 
+Esta máquina virtual va a tener algo diferente a la anterior, a la *ubuntuDesktop*, la idea es que esta máquina esté conectada a dos redes, una la red que tiene *internet* y la otra la red *controlada* por nuestro servidor, de esta manera los ordenadores que conectemos a la red interna estarán bajo nuestro servidor, y se le irán ofreciendo servicios como:
+
+* DHCP
+* DNS
+* LDAP (Servicio de usuarios en red)
+* SAMBA (Carpetas compartidas)
+* NFS (Carpetas compartidas)
+* NTP (Servicio de hora en internet)
+* CUPS (Servicio de impresión)
+
+Esto lo iremos viendo a lo largo del curso, por ahora tan solo nos preocuparemos de configurar de manera **fisica** la red de nuestro entorno. La llamaremos **isolan**
 
 ![UbuntuServer_7](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_7.PNG)
+
+----
+
+### Disco de arranque de la MV ###
+
+Seleccionamos la imágen *ISO* de Ubuntu Server que tenemos.
+
 ![UbuntuServer_8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
+
+----
+
+### Iniciando la mV ###
+
+
 ![UbuntuServer_9](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_9.PNG)
+
+
 ![UbuntuServer_10](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_10.PNG)
 ![UbuntuServer_11](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_11.PNG)
 ![UbuntuServer_12](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_12.PNG)
