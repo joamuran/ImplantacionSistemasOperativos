@@ -26,9 +26,28 @@ Establecemos 768 (debido a que los ordenadores no nos permite mucho más -_-)
 
 
 ![UbuntuServer_3](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_3.PNG)
+
+Creamos un nuevo disco duro para la máquina virtual.
+
 ![UbuntuServer_4](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_4.PNG)
+
+El tipo de disco duro será : VDI *VirtualBox Disk Image*
+
 ![UbuntuServer_5](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_5.PNG)
+
+El espacio será reservado de manera dinámica.
+
 ![UbuntuServer_6](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_6.PNG)
+
+Lo *dejaremos crecer* hasta **20GB**
+
+
+----
+
+### Red de la MV ###
+
+Esta máquina virtual va a tener algo diferente a la anterior, a la *ubuntuDesktop*, la idea es que esta máquina esté conectada a dos redes, una la 
+
 ![UbuntuServer_7](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_7.PNG)
 ![UbuntuServer_8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
 ![UbuntuServer_9](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_9.PNG)
