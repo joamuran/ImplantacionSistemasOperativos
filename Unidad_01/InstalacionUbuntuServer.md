@@ -115,14 +115,20 @@ En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el mod
 
 ### Configuración de la red ###
 
+El instalador si detecta tarjetas de red disponibles para ser usadas por el equipo cargará los drivers en el núcleo *kernel* y nos mostrará un mensaje donde nos pide que le indiquemos a través de que interfaz de red podrá **salir a internet** para descargarse componentes adicionales si lo necesita y configurar las actualizaciones más adelante en el proceso de instalación.
+
 ![UbuntuServer_16](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_16.PNG)
 ![UbuntuServer_17](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_17.PNG)
+
+En nuestro caso es la tarjeta *eth0* la que dispone de **internet**, ya que la otra estará conectada a la red interna, tal y como hemos especificado en la configuración de la MV.
 ![UbuntuServer_18](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_18.PNG)
 ![UbuntuServer_19](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_19.PNG)
 
 ----
 
 ### Configuración del Hostname ###
+
+El nombre de la máquina es muy importante en el caso de los servidores, ya que como veremos más adelante en la asignatura, se utilizará para resolver en primera instancia muchos de los servicios que configuraremos en el servidor.
 
 ![UbuntuServer_20](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_20.PNG)
 
@@ -192,7 +198,7 @@ En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el mod
 
 ----
 
-### Iniciando al nuevo sistema ###
+### Iniciando el nuevo sistema ###
 
 
 ![UbuntuServer_44](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_44.PNG)
