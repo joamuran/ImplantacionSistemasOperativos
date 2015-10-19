@@ -37,3 +37,41 @@ La principal desventaja de la virtualización, es que lógicamente el sistema pr
 Otra de las desventajas es que en ocasiones aparecen problemas en la compatibilidad con el hardware virtualizado, aunque en las últimas versiones de los programas de virtualización estos problemas no se presentan casi nunca.
 
 También podríamos contar como desventaja que todavía nos es difícil configurar ciertos recursos en máquinas virtualizadas, en ocasiones por entendimiento y otras por limitaciones del propio software de virtualización.
+
+## Tipos de Virtualización
+
+Existen dos grandes grupos de Virtualizadores, o **Hypervisores**:
+
+### Para-Virtualización
+
+Tipo 1: También denominado nativo o **bare metal** (sobre el metal *desnudo*), es software que se ejecuta directamente sobre el hardware, para ofrecer la funcionalidad descrita. En este caso el hardware esta compartido entre las maquinas virtuales y el Sistema Operativo que aloja al **Hypervisor**, de esta manera los recursos pueden ser utilizados de manera más adecuada. Ya que cada uno de los sistemas instalados gestiona los recursos *físicos*, permite un mejor aprovechamiento de los mismos.
+
+![Virtualizadores Bare Metal](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/SistemasDeVirtualizacion/Hipervisor_PrimerNivel.svg.png)
+
+Ejemplos de esta tecnologia:
+
+ * VMwware ESXi Free (gratis)
+ * VMware ESX (de pago)
+ * Xen (libre)
+ * Microsoft Hyper-V Server (gratis)
+ * Proxmox (gratis/de pago)
+
+### Virtualización completa
+
+Tipo 2: También llamado **completa**, ya que la virtualización virtualiza todo el hardware. Requiere de mayores recursos para realizar la virtualización, ya que el sistema operativo de la máquina anfitriona debe gestionar todos los recursos, tanto los discos duros, la memoria RAM, el microprocesador, etc.
+
+![Virtualizadores Completos](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/SistemasDeVirtualizacion/Hipervisor_SegundoNivel.svg.png)
+
+Ejemplos :
+
+ * VirtualBox (gratis)
+ * VirtualBox OSE (libre)
+ * VMware Workstation (de pago)
+ * VMware Server (gratis)
+ * QEMU (libre)
+
+> Importante:
+> * Diferenciar entre máquina virtual e **Hypervisor**
+> * Diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa).
+> * Conocer algunos Hypervisores
+>
