@@ -4,7 +4,7 @@
 
 ### Nombre y tipo ###
 
-![UbuntuServer_1](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_1.PNG)
+![Creación de la MV 1](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_1.PNG)
 
 Establecemos el nombre y la *arquitectura* de la máquina virtual
 
@@ -16,7 +16,7 @@ Establecemos el nombre y la *arquitectura* de la máquina virtual
 
 ### Memória RAM para la MV ###
 
-![UbuntuServer_2](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_2.PNG)
+![Creación de la MV 2](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_2.PNG)
 
 Establecemos 768 : debido a que los ordenadores no nos permite mucho más
 
@@ -25,19 +25,19 @@ Establecemos 768 : debido a que los ordenadores no nos permite mucho más
 ### Disco duro para la MV ###
 
 
-![UbuntuServer_3](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_3.PNG)
+![Creación de la MV 3](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_3.PNG)
 
 Creamos un nuevo disco duro para la máquina virtual.
 
-![UbuntuServer_4](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_4.PNG)
+![Creación de la MV 4](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_4.PNG)
 
 El tipo de disco duro será : VDI *VirtualBox Disk Image*
 
-![UbuntuServer_5](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_5.PNG)
+![Creación de la MV 5](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_5.PNG)
 
 El espacio será reservado de manera dinámica.
 
-![UbuntuServer_6](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_6.PNG)
+![Creación de la MV 6](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_6.PNG)
 
 Lo *dejaremos crecer* hasta **20GB**
 
@@ -58,7 +58,7 @@ Esta máquina virtual va a tener algo diferente a la anterior, a la *ubuntuDeskt
 
 Esto lo iremos viendo a lo largo del curso, por ahora tan solo nos preocuparemos de configurar de manera **fisica** la red de nuestro entorno. La llamaremos **isolan**
 
-![UbuntuServer_7](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_7.PNG)
+![Creación de la MV 7](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_7.PNG)
 
 ----
 
@@ -66,7 +66,7 @@ Esto lo iremos viendo a lo largo del curso, por ahora tan solo nos preocuparemos
 
 Seleccionamos la imágen *ISO* de Ubuntu Server que tenemos.
 
-![UbuntuServer_8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
+![Creación de la MV 8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
 
 ----
 
@@ -78,7 +78,7 @@ Ahora lo que haremos será instalar Ubuntu Server en la MV que hemos preparado.
 
 Aparecen algunas opciones adicionales que no habiamos visto cuando arrancamos la *desktop*.
 
-![UbuntuServer_9](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_9.PNG)
+![Creación de la MV 9](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_9.PNG)
 
 ### Proceso de instalación ###
 
@@ -86,9 +86,9 @@ Si seleccionamos un idioma que no está *totalmente* soportado durante la instal
 
 * Elegir *Español*
 
-![UbuntuServer_10](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_10.PNG)
+![Creación de la MV 10](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_10.PNG)
 
-![UbuntuServer_11](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_11.PNG)
+![Creación de la MV 11](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_11.PNG)
 
 ### Configuración de la Ubicación ###
 
@@ -97,19 +97,19 @@ En este punto elegimos el lugar donde está situado el ordenador, esto es muy in
 Recordar que el horario de España en la Península es:
 * GMT+1
 
-![UbuntuServer_12](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_12.PNG)
+![Creación de la MV 12](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_12.PNG)
 ----
 
 ### Configuración del teclado ###
 
 Se nos ofrece la opción de *autodescubrir el teclado*, que consiste en ir pulsando las teclas que nos dice el programa de instalación y él, mediante logica va descartando hasta dar con la configuración adecuada.
 
-![UbuntuServer_13](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_13.PNG)
+![Creación de la MV 13](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_13.PNG)
 
 En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el modelo: Español.
-![UbuntuServer_14](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_14.PNG)
+![Creación de la MV 14](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_14.PNG)
 
-![UbuntuServer_15](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_15.PNG)
+![Creación de la MV 15](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_15.PNG)
 
 ----
 
@@ -117,7 +117,7 @@ En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el mod
 
 El instalador si detecta tarjetas de red disponibles para ser usadas por el equipo cargará los drivers en el núcleo *kernel* y nos mostrará un mensaje donde nos pide que le indiquemos a través de que interfaz de red podrá **salir a internet** para descargarse componentes adicionales si lo necesita y configurar las actualizaciones más adelante en el proceso de instalación.
 
-![UbuntuServer_16](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_16.PNG)
+![Creación de la MV 16](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_16.PNG)
 ![UbuntuServer_17](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_17.PNG)
 
 En nuestro caso es la tarjeta *eth0* la que dispone de **internet**, ya que la otra estará conectada a la red interna, tal y como hemos especificado en la configuración de la MV.
