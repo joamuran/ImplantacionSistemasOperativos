@@ -70,6 +70,10 @@ Ejemplos :
  * VMware Server (gratis)
  * QEMU (libre)
 
+# Enlaces
+
+* [Conceptos Básicos](https://www.youtube.com/watch?v=iSvjBc-JwPs)
+
 > Importante:
 > * Diferenciar entre máquina virtual e **Hypervisor**
 > * Diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa).
