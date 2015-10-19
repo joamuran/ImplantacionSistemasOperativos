@@ -30,7 +30,7 @@ Otras de las ventajas son:
 * Mejora la tolerancia a fallos, si cae un sistema los otros siguen inalterados.
 * Facilita las copias de seguridad.
 
-## Desventajas de la Virtulización
+## Desventajas de la Virtualización
 
 La principal desventaja de la virtualización, es que lógicamente el sistema principal que soportara las máquinas virtuales, debe disponer de una mayor cantidad y potencia de recursos a mayor número de sistemas queramos tener virtualizados en él. Los componentes principales que determinarán el número de máquinas virtuales que se podrán soportar sobre un hardware y el rendimiento de cada una de ellas son: la cantidad y velocidad de memoria RAM, la potencia del procesador y la velocidad de lectura, acceso y transferencia del disco duro, aunque hay más factores que determinarán el rendimiento final del sistema.
 
