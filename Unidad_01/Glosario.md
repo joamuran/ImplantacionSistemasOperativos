@@ -12,3 +12,28 @@ Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Ter
 | dpkg -i ruta_al_deb.deb | Instalar un paquete deb | Debian/++ |
 | dpkg -r nombre_paquete | Desinstalar un paquete deb | Debian/++ |
 
+# Gestión de permisos y usuarios # 
+
+| Comando | Descripción | Común en LinuX |
+| :------|:------:|-------:|
+| su [usuario] | Hacer login con ese usuario | Si |
+| sudo [orden] | Ejecutar como super usuario dicha orden | Si|
+| sudo su | Forma cómoda de hacerse superusuario | Si |
+
+# Inicio y apagado #
+
+| Comando | Descripción | Común en LinuX |
+| :------|:------:|-------:|
+| reboot | reincio | Si |
+| shutdown -h now | Apagado de la maquina | Si|
+| shutdown -h +1 | Apagado en tiempo de la maquina | Si |
+| telinit [0-6] | Establecer el estado de la maquina | Si|
+
+# Gestión de usuarios # 
+
+| Comando | Descripción | Común en LinuX |
+| :------|:------:|-------:|
+| adduser [usuario] | Crea un usuario en el sistema | Si|
+| adduser usuario grupo | Añade al grupo el usuario | Si|
+| addgroup [grupo] | Añade el grupo al sistema | Si|
+
