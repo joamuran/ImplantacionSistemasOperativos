@@ -3,6 +3,7 @@
 Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Terminal.
 
 | Comando | Descripción | Común en LinuX |
+| :------|:------:|-------:|
 | lsb_release -a | Mostrar versión de GNU/LinuX | Si |
 | df -h | Muestra el uso del disco duro | Si |
 | free -m | Muestra el uso de la memória RAM | Si| 
