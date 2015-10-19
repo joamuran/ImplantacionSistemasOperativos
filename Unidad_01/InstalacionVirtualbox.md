@@ -31,7 +31,15 @@ La línea de VirtualBox:
 
   deb http://download.virtualbox.org/virtualbox/debian vivid contrib
 
-Toca sustituir la palabra **vivid** de la linea anterior por la distribución soportada que estemos usando como distro base. Las opciones pueden ser:
+Toca sustituir la palabra **vivid** de la linea anterior por la distribución soportada que estemos usando como distro base. Para saber que distribución de GNU/LinuX tenemos instalada el comando es:
+
+  `lsb_release -a`
+
+>
+> Recordar que los comandos más importantes los teneis disponibles en el
+> [Glosario](http://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/Glosario.md)
+
+Las opciones pueden ser:
 
 Basadas en Ubuntu:
 * utopic
