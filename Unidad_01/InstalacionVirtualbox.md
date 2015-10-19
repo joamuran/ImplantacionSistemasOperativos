@@ -38,6 +38,7 @@ Toca sustituir la palabra **vivid** de la linea anterior por la distribución so
 >
 > Recordar que los comandos más importantes los teneis disponibles en el
 > [Glosario](https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/Glosario.md)
+>
 
 Las opciones pueden ser:
 
@@ -62,3 +63,7 @@ Una vez realizados estos pasos:
 
   `sudo apt-get update`
   `sudo apt-get install virtualbox`
+
+## Ventajas de los repositorios software.
+
+Si añadimos VirtualBox a la lista de repositorios, cuando ejecutemos el comando de actualización del sistema, *apt* comprobará si hay una nueva versión de VirtualBox y lo actualizará sin necesidad de que nos tengamos que descargar el *.deb* de la página y realizar el proceso anterior.
