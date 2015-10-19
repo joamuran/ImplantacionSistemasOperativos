@@ -37,7 +37,7 @@ Toca sustituir la palabra **vivid** de la linea anterior por la distribución so
 
 >
 > Recordar que los comandos más importantes los teneis disponibles en el
-> [Glosario](http://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/Glosario.md)
+> [Glosario](https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/Glosario.md)
 
 Las opciones pueden ser:
 
