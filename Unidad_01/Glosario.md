@@ -37,3 +37,4 @@ Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Ter
 | adduser usuario grupo | Añade al grupo el usuario | Si|
 | addgroup [grupo] | Añade el grupo al sistema | Si|
 
+### Qemu###
