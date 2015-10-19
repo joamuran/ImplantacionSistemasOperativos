@@ -2,34 +2,12 @@
 
 Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Terminal.
 
-## Mostrar versión de GNU/LinuX ##
+| Comando | Descripción | Común en LinuX |
+| lsb_release -a | Mostrar versión de GNU/LinuX | Si |
+| df -h | Muestra el uso del disco duro | Si |
+| free -m | Muestra el uso de la memória RAM | Si| 
+| top | Lista los procesos activos y el uso de la CPU | Si | 
+| dpkg -l | Lista los paquetes instalados en el sistema | Debian/++ |
+| dpkg -i ruta_al_deb.deb | Instalar un paquete deb | Debian/++ |
+| dpkg -r nombre_paquete | Desinstalar un paquete deb | Debian/++ |
 
-* lsb_release -a
-
-## Mostrar uso del disco duro ##
-
-* df -h
-
-## Mostrar memória RAM disponible/uso ##
-
-* free -m
-
-## Lista de procesos en marcha ##
-
-* top
-
-## Listar paquetes instalados en el sistema ##
-
-* dpkg -l
-
-## Instalar un paquete *.deb* ##
-
-* dpkg -i ruta_al_deb.deb
-
-## Desinstalar un paquete ##
-
-* dpkg -r nombre_del_deb
-
-## Información sobre el paquete ##
-
-* dpkg -I ruta_al_deb
