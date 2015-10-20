@@ -1,6 +1,10 @@
-# Arquitectura Sistema Operativo
+# Sistemas Operativos
 
 ## Importante
+ * Conocer los objetivos del sistema operativo
+ * Conocer las funciones que realiza
+ * Conocer los diferentes tipos de sistemas operativos
+ * Entender lo que és un sistema operativo distribuido
 
 
 ## Objetivos del Sistema Operativo
@@ -11,13 +15,13 @@ ofreciéndole una vía sencilla y flexible de acceso al mismo, teniendo dos obje
 ### Seguridad
 El sistema operativo debe actuar contra cualquier manipulación extraña, ya sea accidental o premeditada que pudiera dañar la información, perjudicar a otros usuarios o provocar un funcionamiento indeseado del sistema. Por ejemplo, hay ciertas instrucciones que pueden parar la máquina y otras que realizan operaciones directamente sobre el hardware, que debemos evitar que se utilicen por los programas. Para ello, algunos sistemas proporcionan dos estados, llamados estado protegido (Sistema o Kernel), en el cual se ejecuta el sistema operativo, y estado no protegido (Usuario o User), que es el destinado a la ejecución de los programas de usuario y de aplicación. De esta manera se impide que los programas de los usuarios puedan tener contacto directo con el hardware, o puedan forzar un incorrecto funcionamiento del sistema.
 
-[Capas del SO](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_Capas.PNG))
+![Capas del SO](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_Capas.PNG))
 
 
 ### Abstracción
 La tendencia actual del software y de los lenguajes de programación es ocultar lo más posible los detalles de más bajo nivel, intentando dar a los niveles superiores una visión más sencilla, global y abstracta, ofreciéndoles operaciones para manipular dichas estructuras ocultas, desconociendo por completo la gestión interna de las mismas. Sobre estas estructuras se construyen otras que abstraen a las anteriores, y así sucesivamente. Gracias a la abstracción, los sistemas operativos enmascaran los recursos físicos, permitiendo su manejo con funciones más generales que ocultan las básicas, constituyendo verdaderos recursos ficticios o virtuales, que mejoran y son más potentes que los físicos. Desde el punto de vista de un programa o usuario, la máquina física se convierte, en una máquina extendida, que presenta la ventaja respecto a la física de ofrecer más funciones de las que normalmente soportaría esta última. Entre las posibilidades de esto estarían las carpetas compartidas, los usuarios de red, las impresoras compartidas, etc.
 
-[Abstraccion del HW](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_MaquinaExtendida.PNG)
+![Abstraccion del HW](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_MaquinaExtendida.PNG)
 
 
 
@@ -52,7 +56,7 @@ Mecanismos para permitir o denegar el acceso a los usuarios y a sus procesos a d
 
 Existen muchas categorizaciones, pero una de las más comunes es la de los servicios que ofrece.
 
-[Tipos de SO](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_Tipos.PNG)
+![Tipos de SO](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/ArquitecturaSistemaOperativo/SO_Tipos.PNG)
 
 ### Según el número de usuarios:
 
@@ -80,3 +84,43 @@ Los sistemas monotarea son aquellos que sólo permiten una tarea a la vez por us
 
 #### Multitarea.
 Un sistema operativo multitarea es aquél que le permite al usuario estar realizando varias labores al mismo tiempo. Por ejemplo, puede estar editando el código fuente de un programa durante su depuración mientras compila otro programa, a la vez que está recibiendo correo electrónico en un proceso en background (segundo plano). Es común encontrar en ellos interfaces gráficas orientadas al uso de menús y el ratón, lo cual permite un rápido intercambio entre las tareas para el usuario, mejorando su productividad.
+
+### Sistemas Operativos Distribuidos
+
+Un sistema distribuido se define como una colección de equipos informáticos separados físicamente y conectados entre sí por una red de comunicaciones distribuida; cada máquina posee sus componentes de hardware y software de modo que el usuario percibe que existe un solo sistema (no necesita saber qué cosas están en qué máquinas). El usuario accede a los recursos remotos de la misma manera en que accede a recursos locales ya que no percibe que existan varios ordenadores, sino que solo es capaz de ver uno formado por todos los anteriores.
+Una ventaja fundamental de los sistemas distribuidos, es que permiten aumentar la potencia del sistema informático, de modo que 100 ordenadores trabajando en conjunto, permiten formar un único ordenador que sería 100 veces más potente que un ordenador convencional.
+
+Los sistemas distribuidos son muy confiables, ya que si un componente del sistema se estropea otro componente debe de ser capaz de reemplazarlo, esto se denomina **Tolerancia a Fallos**.
+
+El tamaño de un sistema distribuido puede ser muy variado, ya sean decenas de hosts (red de área local), centenas de hosts (red de área metropolitana), y miles o millones de hosts (Internet); esto se denomina escalabilidad. De hecho, si un ordenador formando por
+un sistema distribuido se queda “corto” para las necesidades de la empresa, basta con instalar más.
+
+La computación distribuida ha sido diseñada para resolver problemas demasiado grandes para cualquier supercomputadora y mainframe, mientras se mantiene la flexibilidad de trabajar en múltiples problemas más pequeños.
+
+Esta forma de computación se conoce como **grid**. Los grandes retos de cálculo de hoy en día, como el descubrimiento de medicamentos,
+simulación de terremotos, inundaciones y otras catástrofes naturales, modelización del clima/tiempo, grandes buscadores de internet, el programa SETI\footnote{Podeis encontrar información de esto en [Seti@Home](http://setiweb.ssl.berkeley.edu/), etc. Son posibles gracias a estos sistemas operativos distribuidos que permiten utilizar la computación distribuida.
+
+El modelo de computación de ciclos redundantes, también conocido como computación zombi, es el empleado por aplicaciones como *Seti@Home*, consistente en que un servidor o grupo de servidores distribuyen trabajo de procesamiento a un grupo de computadoras voluntarias a ceder capacidad de procesamiento no utilizada. Básicamente, cuando dejamos nuestro ordenador encendido, pero sin utilizarlo, la capacidad de procesamiento se desperdicia por lo general en algún protector de pantalla, este tipo de procesamiento distribuido utiliza nuestra computadora cuando nosotros no la necesitamos, aprovechando al máximo la capacidad de procesamiento. La consola PS3 también cuenta con una iniciativa de este tipo.
+
+Otro método similar para crear sistemas de supercomputadoras es el
+clustering
+. Un
+cluster o racimo de computadoras
+consiste en un grupo de computadoras
+de relativo bajo costo conectadas entre
+sí mediante un sistema de red de alta
+velocidad (gigabit de fibra óptica por lo
+general) y un software que realiza la
+distribución de la carga de trabajo entre
+los equipos. Por lo general, este tipo de
+sistemas cuentan con un centro de
+almacenamiento de datos único. Los
+clusters tienen la ventaja de ser
+sistemas redundantes, si falla un equipo
+se resiente un poco la potencia del
+cluster, pero los demás equipos hacen
+que no se note el fallo.
+Algunos sistemas operativos que
+permiten realizar clustering o grid, son;
+Amoeba, BProc, DragonFly BSD,
+Génesis, Kerrighed, Mosix/OpenMosix, Nomad, OpenSSI, Plurid.
