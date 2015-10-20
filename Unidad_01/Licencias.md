@@ -1,5 +1,87 @@
 # Licencias
 
+## Importante
+
+ * Saber que es una licencia.
+ * Entender la importancia de las EULAS
+ * Distinguir entre Software Libre y Software gratis
+ * Conocer las diferentes licencas y ventas de licencias
+
+
+## Licencia
+Contrato entre el desarrollador de un software sometido a propiedad intelectual y a derechos de autor y el usuario, en el cual se definen con precisión los derechos y deberes de ambas partes. Es el desarrollador, o aquél a quien éste haya cedido los derechos de explotación, quien elige la licencia según la cual distribuye el software.
+
+## Patente
+Conjunto de derechos exclusivos garantizados por un gobierno o autoridad al inventor de un nuevo producto (material o inmaterial) susceptible de ser explotado industrialmente para el bien del solicitante por un periodo de tiempo limitado.
+
+## Derecho de autor o copyright
+Forma de protección proporcionada por las leyes vigentes en la mayoría de los países para los autores de obras originales incluyendo obras literarias, dramáticas, musicales, artísticas e intelectuales, tanto publicadas como pendientes de publicar.
+
+## Software libre
+Proporciona la libertad de:
+ * Ejecutar el programa, para cualquier propósito;
+ * Estudiar el funcionamiento del programa, y adaptarlo a sus necesidades;
+ * Redistribuir copias;
+ * Mejorar el programa, y poner sus mejoras a disposición del público, para beneficiode toda la comunidad.
+
+## Software de fuente abierta
+
+Sus términos de distribución cumplen los criterios de
+
+ * Distribución libre;
+ * Inclusión del código fuente;
+ * Permitir modificaciones y trabajos derivados en las mismas condiciones que el software original;
+ * Integridad del código fuente del autor, pudiendo requerir que los trabajos derivados tengan distinto nombre o versión;
+ * No discriminación a personas o grupos;
+ * Sin uso restringido a campo de actividad;
+ * Los derechos otorgados a un programa serán válidos para todo el software redistribuido sin imponer condiciones complementarias;
+ * La licencia no debe ser específica para un producto determinado;
+ * La licencia no debe poner restricciones a otro producto que se distribuya junto con el software licenciado;
+ * La licencia debe ser tecnológicamente neutral.
+
+## Estándar abierto
+Según Bruce Perens, el basado en los principios de
+
+ * Disponibilidad;
+ * Maximizar las opciones del usuario final;
+ * Sin tasas sobre la implementación;
+ * Sin discriminación de implementador;
+ * Permiso de extensión o restricción;
+ * Evitar prácticas predatorias por fabricantes dominantes
+
+## Software de dominio público
+Aquél que no está protegido con copyright
+
+## Software con copyleft
+Software libre cuyos términos de distribución no permiten a los redistribuidores agregar ninguna restricción adicional cuando lo redistribuyen o modifican, o sea, la versión modificada debe ser también libre
+
+## Software semi libre
+Aquél que no es libre, pero viene con autorización de usar, copiar,
+distribuir y modificar para particulares sin fines de lucro
+
+## Freeware
+Se usa comúnmente para programas que permiten la redistribución pero no la
+modificación (y su código fuente no está disponible)
+
+## Shareware
+Software con autorización de redistribuir copias, pero debe pagarse cargo por licencia de uso continuado.
+
+## Software privativo
+Aquél cuyo uso, redistribución o modificación están prohibidos o
+necesitan una autorización.
+
+## Software comercial
+El desarrollado por una empresa que pretende ganar dinero por su
+uso.
+
+\newpage
+
+## Tipos de licencias
+El siguiente gráfico puede expresar los distintos conjuntos de licencias, de donde se puede deducir que software libre y de fuente abierto no son estrictamente similares y que la cualidad del copyleft no es una condición indispensable en todas estas licencias.
+
+![Free Software](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/Licencias/FreeSoftware.PNG)
+
+
 ## Sistemas Operativos Libres
 Son sistemas operativos en los que se ha renunciado a cualquier tipo de propiedad intelectual. Son sistemas que pueden usarse libremente, ser distribuidos, permiten que se acceda a su código fuente y permiten que esté sea modificado de la forma que queramos.
 
