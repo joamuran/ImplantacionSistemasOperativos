@@ -1,5 +1,10 @@
 # Sistemas de Virtualización
 
+## Importante
+* Diferenciar entre máquina virtual e **Hypervisor**
+* Conocer las diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa)
+* Conocer algunos Hypervisores
+
 ## ¿Qué es un Sistema de Virtualización?
 
 Es la simulación de un sistema físico (un ordenador) con unas características hardware determinadas. Cuando se ejecuta el programa (simulador), proporciona un ambiente de ejecución similar a todos los efectos a un ordenador físico (excepto en el puro acceso físico al hardware simulado), con CPU (puede ser más de una), BIOS, tarjeta gráfica, memoria RAM, tarjeta de red, sistema de sonido, conexión USB, disco duro (pueden ser más de uno), etc.
@@ -16,6 +21,7 @@ Una máquina virtual es un contenedor de software perfectamente aislado que pued
 
 A todos los efectos una máquina virtual se considera como una máquina con su sistema operativo propio incluso los otros ordenadores de la red así lo *verán*. Aunque no debemos olvidar que en realidad todo está basado en software. Esto nos reporta una serie de ventajas y algún que otro inconveniente.
 
+\newpage
 ## Ventajas de la Virtualización
 
 La principal ventaja de la virtualización es poder tener varios sistemas dentro de un solo hardware físico como si de varias máquinas con sus respectivos componentes hardware se tratase, siendo independientes los unos de los otros.
@@ -38,6 +44,7 @@ Otra de las desventajas es que en ocasiones aparecen problemas en la compatibili
 
 También podríamos contar como desventaja que todavía nos es difícil configurar ciertos recursos en máquinas virtualizadas, en ocasiones por entendimiento y otras por limitaciones del propio software de virtualización.
 
+\newpage
 ## Tipos de Virtualización
 
 Existen dos grandes grupos de Virtualizadores, o **Hypervisores**:
@@ -70,13 +77,6 @@ Ejemplos :
  * VMware Server (gratis)
  * QEMU (libre)
 
-```
-Importante:
-* Diferenciar entre máquina virtual e **Hypervisor**
-* Diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa)
-* Conocer algunos Hypervisores
-````
-
-# Enlaces
+## Enlaces
 
 * [Conceptos Básicos](https://www.youtube.com/watch?v=iSvjBc-JwPs)

@@ -3,6 +3,8 @@
 ¿Qué encontrarás aquí?
 
 * [Glosario](https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/Glosario.md)
+* [Arquitectura de un Sistema Informático] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/ArquitecturaSistemaInformatico.md)
+* [Arquitectura de un Sistema Operativo] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/ArquitecturaSistemaOperativo.md)
 * [Sistemas de Virtualización] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/SistemasDeVirtualizacion.md)
 * [Instalación de Virtualbox] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionVirtualbox.md)
 * [Instalación de QEmu] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionQEmu.md)
