@@ -19,6 +19,7 @@ Forma de protección proporcionada por las leyes vigentes en la mayoría de los 
 
 ## Software libre
 Proporciona la libertad de:
+
  * Ejecutar el programa, para cualquier propósito;
  * Estudiar el funcionamiento del programa, y adaptarlo a sus necesidades;
  * Redistribuir copias;

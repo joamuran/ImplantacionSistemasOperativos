@@ -109,7 +109,8 @@ Otro método similar para crear sistemas de supercomputadoras es el clustering
 Un **cluster** o racimo de computadoras consiste en un grupo de computadoras de relativo bajo costo conectadas entre
 sí mediante un sistema de red de alta velocidad (gigabit de fibra óptica por lo general) y un software que realiza la distribución de la carga de trabajo entre los equipos. Por lo general, este tipo de sistemas cuentan con un centro de almacenamiento de datos único. Los clusters tienen la ventaja de ser sistemas redundantes, si falla un equipo se resiente un poco la potencia del cluster, pero los demás equipos hacen que no se note el fallo.
 
-Algunos sistemas operativos que permiten realizar **clustering** o **grid**, son;
+Algunos sistemas operativos que permiten realizar **clustering** o **grid**, son:
+
  * Amoeba
  * BProc
  * DragonFly BSD
