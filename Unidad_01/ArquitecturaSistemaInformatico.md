@@ -1,3 +1,4 @@
+\newpage
 # Arquitectura de un Sistema Informático
 
 ## Importante

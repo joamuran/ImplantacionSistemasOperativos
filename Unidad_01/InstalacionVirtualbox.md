@@ -1,3 +1,4 @@
+\newpage
 # Instalación de VirtualBox
 
 

@@ -1,3 +1,4 @@
+\newpage
 # Sistemas de Virtualización
 
 ## Importante
