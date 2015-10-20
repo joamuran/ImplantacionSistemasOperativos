@@ -70,12 +70,12 @@ Ejemplos :
  * VMware Server (gratis)
  * QEMU (libre)
 
-
- > Importante:
- > * Diferenciar entre máquina virtual e **Hypervisor**
- > * Diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa).
- > * Conocer algunos Hypervisores
- 
+```
+Importante:
+* Diferenciar entre máquina virtual e **Hypervisor**
+* Diferencias entre los sistemas de virtualización (para-virtualización y virtualización completa)
+* Conocer algunos Hypervisores
+````
 
 # Enlaces
 
