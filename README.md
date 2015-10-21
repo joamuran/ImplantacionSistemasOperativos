@@ -11,4 +11,4 @@ Repositorio de GitHub para la asignatura de ISO: *Implantación de Sistemas Oper
 * [Unidad 01: Introducción a los Sistemas Operativos y Virtualización](https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/Readme.md)
 
 ## Licencia
-### Creative Commons 
+### Creative Commons

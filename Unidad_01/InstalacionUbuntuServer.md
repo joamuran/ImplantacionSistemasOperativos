@@ -1,3 +1,5 @@
+\newpage
+
 # Instalación de Ubuntu Server #
 
 ## Creación de la máquina virtual ##
@@ -95,10 +97,11 @@ Si seleccionamos un idioma que no está *totalmente* soportado durante la instal
 En este punto elegimos el lugar donde está situado el ordenador, esto es muy interesante, no solo para el idioma determinado, si no también por que  el cambio de hora se hará automáticamente dependiendo del horario.
 
 Recordar que el horario de España en la Península es:
+
 * GMT+1
 
 ![Creación de la MV 12](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_12.PNG)
-----
+
 
 ### Configuración del teclado ###
 
@@ -111,7 +114,6 @@ En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el mod
 
 ![Creación de la MV 15](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_15.PNG)
 
-----
 
 ### Configuración de la red ###
 
@@ -124,7 +126,6 @@ En nuestro caso es la tarjeta *eth0* la que dispone de **internet**, ya que la o
 ![UbuntuServer_18](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_18.PNG)
 ![UbuntuServer_19](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_19.PNG)
 
-----
 
 ### Configuración del Hostname ###
 
@@ -132,7 +133,6 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 
 ![UbuntuServer_20](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_20.PNG)
 
-----
 
 ### Configuración de los usuarios ###
 ![UbuntuServer_21](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_21.PNG)
@@ -141,14 +141,12 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 ![UbuntuServer_24](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_24.PNG)
 ![UbuntuServer_25](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_25.PNG)
 
-----
 
 ### Configuración del NTP ###
 
 ![UbuntuServer_26](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_26.PNG)
 ![UbuntuServer_27](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_27.PNG)
 
-----
 
 ### Configuracion de los discos - Particionado ###
 
@@ -160,19 +158,15 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 ![UbuntuServer_32](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_32.PNG)
 ![UbuntuServer_33](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_33.PNG)
 
-----
-
 ### Copia del sistema a la raiz ###
 
 ![UbuntuServer_34](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_34.PNG)
 
-----
 
 ### Configuración del proxy en apt ###
 
 ![UbuntuServer_35](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_35.PNG)
 
-----
 
 ### Configuración de tasksel y las actualizaciones automáticas ###
 
@@ -181,14 +175,12 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 ![UbuntuServer_38](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_38.PNG)
 ![UbuntuServer_39](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_39.PNG)
 
-----
 
 ### Instalación del GRUB ###
 
 ![UbuntuServer_40](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_40.PNG)
 ![UbuntuServer_41](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_41.PNG)
 
-----
 
 ### Terminando la instalación ###
 
@@ -196,7 +188,6 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 ![UbuntuServer_42](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_42.PNG)
 ![UbuntuServer_43](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_43.PNG)
 
-----
 
 ### Iniciando el nuevo sistema ###
 
