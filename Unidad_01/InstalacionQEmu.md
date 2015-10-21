@@ -26,15 +26,15 @@ Para instalar un sistema operativo virtual, lo primero es crear una imagen de di
 
 Luego de bajar la iso de Debian https://www.debian.org/CD/ , la instalamos con:
 
-qemu-system-x86_64 -m 2048 -hda debian7.img -cdrom debian-7.4.0-amd64-xfce-CD-1.iso -boot d
+  `qemu-system-x86_64 -m 2048 -hda debian7.img -cdrom debian-7.4.0-amd64-xfce-CD-1.iso -boot d`
 
 Si la instalación se hace con un CD-ROM (si es con un DVD cambiar el directorio a /dev/dvd) el comando será:
 
-qemu-system-x86_64 -m 2048 -hda debian7.img -cdrom /dev/cdrom -boot d
+  `qemu-system-x86_64 -m 2048 -hda debian7.img -cdrom /dev/cdrom -boot d`
 
 Por último, luego de finalizar la instalación, la maquina virtual se apaga normalmente. Para volver a encenderla:
 
-qemu-system-x86_64 -m 2048 -hda debian7.img -kernel-kqemu
+  `qemu-system-x86_64 -m 2048 -hda debian7.img -kernel-kqemu`
 
 
 Tutorial obtenido de [Fortinux](https://fortinux.com/tutoriales/linux-2-tutoriales/tutorial-instalar-kmv-y-qemu-en-gnulinux/)
