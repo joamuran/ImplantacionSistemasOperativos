@@ -1,3 +1,4 @@
+\newpage
 # Instalación de QEmu
 
 Primero hay que comprobar si tenemos instaladas las extensiones Intel VT o AMD-V en nuestra CPU que permitirán al módulo del Kernel Linux KMV rodar la mayor parte del código directamente en el procesador.
@@ -5,7 +6,7 @@ Primero hay que comprobar si tenemos instaladas las extensiones Intel VT o AMD-V
 Abrimos un terminal y escribimos:
 
   `egrep '(vmx|svm)' /proc/cpuinfo`
-	
+
 Si el comando no devuelve nada quiere decir que no las tenemos e instalar KMV no va a servir, caso contrario, instalamos KMV:
 
   `sudo apt-get install kvm`
