@@ -25,6 +25,7 @@
 * [Virtualbox](https://www.virtualbox.org/)
 * [Ubuntu Server](http://www.ubuntu.com/server)
 * [Ubuntu Desktop](http://www.ubuntu.com/desktop)
+* [Microsoft VLM](http://www.microsoft.com/es-es/licensing/default.aspx#tab=1)
 
 ## Otros enlaces ##
 * [Qemu + VDI](http://bethesignal.org/blog/2011/01/05/how-to-mount-virtualbox-vdi-image/)
