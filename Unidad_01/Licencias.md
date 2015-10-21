@@ -6,7 +6,7 @@
  * Saber que es una licencia.
  * Entender la importancia de las EULAS
  * Distinguir entre Software Libre y Software gratis
- * Conocer las diferentes licencas y ventas de licencias
+ * Conocer las diferentes licencias y ventas de licencias
 
 
 ## Licencia
