@@ -64,6 +64,7 @@ Ejemplos de esta tecnologia:
  * Microsoft Hyper-V Server (gratis)
  * Proxmox (gratis/de pago)
 
+\newpage
 ### Virtualización completa
 
 Tipo 2: También llamado **completa**, ya que la virtualización virtualiza todo el hardware. Requiere de mayores recursos para realizar la virtualización, ya que el sistema operativo de la máquina anfitriona debe gestionar todos los recursos, tanto los discos duros, la memoria RAM, el microprocesador, etc.

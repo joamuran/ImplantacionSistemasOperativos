@@ -14,7 +14,6 @@ Establecemos el nombre y la *arquitectura* de la máquina virtual
 * LinuX
 * Ubuntu (64-bits)
 
-----
 
 ### Memória RAM para la MV ###
 
@@ -22,7 +21,6 @@ Establecemos el nombre y la *arquitectura* de la máquina virtual
 
 Establecemos 768 : debido a que los ordenadores no nos permite mucho más
 
-----
 
 ### Disco duro para la MV ###
 
@@ -44,7 +42,6 @@ El espacio será reservado de manera dinámica.
 Lo *dejaremos crecer* hasta **20GB**
 
 
-----
 
 ### Red de la MV ###
 
@@ -62,7 +59,6 @@ Esto lo iremos viendo a lo largo del curso, por ahora tan solo nos preocuparemos
 
 ![Creación de la MV 7](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_7.PNG)
 
-----
 
 ### Disco de arranque de la MV ###
 
@@ -70,7 +66,6 @@ Seleccionamos la imágen *ISO* de Ubuntu Server que tenemos.
 
 ![Creación de la MV 8](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_8.PNG)
 
-----
 
 ## Instalación de Ubuntu Server ##
 
@@ -110,6 +105,7 @@ Se nos ofrece la opción de *autodescubrir el teclado*, que consiste en ir pulsa
 ![Creación de la MV 13](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_13.PNG)
 
 En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el modelo: Español.
+
 ![Creación de la MV 14](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_14.PNG)
 
 ![Creación de la MV 15](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_15.PNG)
@@ -123,6 +119,7 @@ El instalador si detecta tarjetas de red disponibles para ser usadas por el equi
 ![UbuntuServer_17](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_17.PNG)
 
 En nuestro caso es la tarjeta *eth0* la que dispone de **internet**, ya que la otra estará conectada a la red interna, tal y como hemos especificado en la configuración de la MV.
+
 ![UbuntuServer_18](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_18.PNG)
 ![UbuntuServer_19](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_19.PNG)
 
@@ -135,14 +132,25 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 
 
 ### Configuración de los usuarios ###
+
+Durante el proceso de instalación se pregunta por el usuario administrador de la máquina (recordar que Ubuntu tiene la cuenta de **root** desactivada para hacer login por defecto).
+
+Los pasos son los habituales:
+
+ * Nombre completo  para la cuenta: *Angel Berlanas*
+ * Nombre de usuario : *aberlanas*
+ * Contraseña (dos veces para comprobar que se ha escrito correctamente)
+ * Configurar el cifrado de la carpeta personal
+
 ![UbuntuServer_21](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_21.PNG)
 ![UbuntuServer_22](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_22.PNG)
 ![UbuntuServer_23](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_23.PNG)
 ![UbuntuServer_24](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_24.PNG)
 ![UbuntuServer_25](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_25.PNG)
 
-
 ### Configuración del NTP ###
+
+Veremos más adelante en que consiste este servicio, por ahora teneis que tener en cuenta que es el que mantiene en hora el servidor, ajustandolo a los horarios de verano/invierno y preguntando a los relojes atómicos cual es la fecha *exacta* en cada momento. Esto es especialmente importante si vamos a usar *kerberos* como mecanismo de autenticación, ya que este sistema de seguridad es muy estricto con los tiempos.
 
 ![UbuntuServer_26](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_26.PNG)
 ![UbuntuServer_27](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_27.PNG)
@@ -150,6 +158,7 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 
 ### Configuracion de los discos - Particionado ###
 
+A continuación vemos un particionado básico, en el caso de esta máquina virtual al no tener nada instalado es una configuración sencilla.
 
 ![UbuntuServer_28](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_28.PNG)
 ![UbuntuServer_29](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_29.PNG)
@@ -160,15 +169,27 @@ El nombre de la máquina es muy importante en el caso de los servidores, ya que 
 
 ### Copia del sistema a la raiz ###
 
+Una vez particionado y listo, el sistema se copia a la carpeta raiz */* para los futuros arranques.
+
 ![UbuntuServer_34](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_34.PNG)
 
 
 ### Configuración del proxy en apt ###
 
+En el caso de se esté usando un proxy para aprovechar el ancho de banda disponible, es conveniente configurarlo en este momento. En nuestro caso la configuración será vacia, ya que no utilizamos ninguno.
+
 ![UbuntuServer_35](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_35.PNG)
 
-
+\newpage
 ### Configuración de tasksel y las actualizaciones automáticas ###
+
+Tasksel es un pequeño gestor de paquetes que permite instalar *suites* o *conjuntos de programas* que ofrecen una determinada funcionalidad en su conjunto:
+
+A cont
+
+ * Servidor LAMP :
+ * Servidor de OpenSSH :
+
 
 ![UbuntuServer_36](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_36.PNG)
 ![UbuntuServer_37](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_37.PNG)
