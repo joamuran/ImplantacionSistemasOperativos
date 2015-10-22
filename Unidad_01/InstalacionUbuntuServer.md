@@ -185,10 +185,12 @@ En el caso de se esté usando un proxy para aprovechar el ancho de banda disponi
 
 Tasksel es un pequeño gestor de paquetes que permite instalar *suites* o *conjuntos de programas* que ofrecen una determinada funcionalidad en su conjunto:
 
-A cont
+A continuación vemos algunos (no os preocupeis que volveremos a ver esta pantalla más adelante)
 
- * Servidor LAMP :
- * Servidor de OpenSSH :
+ * Servidor LAMP : Linux+Apache+MySQL+Php.
+ * Servidor de OpenSSH : Lo usaremos para sesiones remotas (marcar para instalarlo)
+ * Servidor de Impresión : CUPS
+ * ...
 
 
 ![UbuntuServer_36](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_36.PNG)
@@ -199,12 +201,15 @@ A cont
 
 ### Instalación del GRUB ###
 
+El gestor de arranque en GNU/LinuX que está más extendido es GRUB (versiones 1 y 2). Veremos en clase en que consiste y como modificarlo. Por ahora basta que le digamos que queremos instalarlo en el registro principal de arranque (**MBR**)
+
 ![UbuntuServer_40](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_40.PNG)
 ![UbuntuServer_41](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_41.PNG)
 
 
 ### Terminando la instalación ###
 
+El mensaje que veremos es bastante explicativo...
 
 ![UbuntuServer_42](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_42.PNG)
 ![UbuntuServer_43](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_43.PNG)
@@ -212,6 +217,7 @@ A cont
 
 ### Iniciando el nuevo sistema ###
 
+Y ya tenemos nuestro *Ubuntu Server* perfectamente configurado
 
 ![UbuntuServer_44](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_44.PNG)
 ![UbuntuServer_45](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_45.PNG)

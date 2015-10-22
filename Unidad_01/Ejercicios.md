@@ -26,7 +26,7 @@
 7. Elabora una tabla con los precios de licencias por Volumen de Microsoft para los productos:
 
  * Windows 10
- * Windows Server 
+ * Windows Server
  * Microsoft Office 365
  * SQL Server 2014
  * Microsoft Azure
