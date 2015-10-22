@@ -169,7 +169,7 @@ A continuación vemos un particionado básico, en el caso de esta máquina virtu
 
 ### Copia del sistema a la raiz ###
 
-Una vez particionado y listo, el sistema se copia a la carpeta raiz */* para los futuros arranques.
+Una vez particionado y listo, el sistema se copia a la carpeta raiz */* para los futuros arranques. Esto lo veremos en los proximos dias.
 
 ![Creación de la MV 34](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_34.PNG)
 
@@ -182,6 +182,12 @@ En el caso de se esté usando un proxy para aprovechar el ancho de banda disponi
 
 \newpage
 ### Configuración de tasksel y las actualizaciones automáticas ###
+
+Acerca de las actualizaciones automáticas, por ahora lo marcaremos como:
+
+  `Sin actualizaciones automáticas`
+
+Ya veremos más adelante como habilitarlas (si lo necesitamos).
 
 Tasksel es un pequeño gestor de paquetes que permite instalar *suites* o *conjuntos de programas* que ofrecen una determinada funcionalidad en su conjunto:
 
@@ -217,7 +223,7 @@ El mensaje que veremos es bastante explicativo...
 
 ### Iniciando el nuevo sistema ###
 
-Y ya tenemos nuestro *Ubuntu Server* perfectamente configurado
+Y ya tenemos nuestro *Ubuntu Server* perfectamente configurado.
 
 ![Creación de la MV 44](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_44.PNG)
 ![Creación de la MV 45](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_45.PNG)
