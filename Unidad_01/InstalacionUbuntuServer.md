@@ -116,19 +116,19 @@ En nuestro caso lo que seleccionaremos es que le especificaremos nosotros el mod
 El instalador si detecta tarjetas de red disponibles para ser usadas por el equipo cargará los drivers en el núcleo *kernel* y nos mostrará un mensaje donde nos pide que le indiquemos a través de que interfaz de red podrá **salir a internet** para descargarse componentes adicionales si lo necesita y configurar las actualizaciones más adelante en el proceso de instalación.
 
 ![Creación de la MV 16](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_16.PNG)
-![UbuntuServer_17](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_17.PNG)
+![Creación de la MV 17](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_17.PNG)
 
 En nuestro caso es la tarjeta *eth0* la que dispone de **internet**, ya que la otra estará conectada a la red interna, tal y como hemos especificado en la configuración de la MV.
 
-![UbuntuServer_18](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_18.PNG)
-![UbuntuServer_19](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_19.PNG)
+![Creación de la MV 18](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_18.PNG)
+![Creación de la MV 19](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_19.PNG)
 
 
 ### Configuración del Hostname ###
 
 El nombre de la máquina es muy importante en el caso de los servidores, ya que como veremos más adelante en la asignatura, se utilizará para resolver en primera instancia muchos de los servicios que configuraremos en el servidor.
 
-![UbuntuServer_20](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_20.PNG)
+![Creación de la MV 20](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_20.PNG)
 
 
 ### Configuración de los usuarios ###
@@ -137,48 +137,48 @@ Durante el proceso de instalación se pregunta por el usuario administrador de l
 
 Los pasos son los habituales:
 
- * Nombre completo  para la cuenta: *Angel Berlanas*
- * Nombre de usuario : *aberlanas*
- * Contraseña (dos veces para comprobar que se ha escrito correctamente)
- * Configurar el cifrado de la carpeta personal
+ * Nombre completo  para la cuenta: *Usuario Administrador*
+ * Nombre de usuario : *adminiso*
+ * Contraseña (dos veces para comprobar que se ha escrito correctamente) : *admin1s0*
+ * Configurar el cifrado de la carpeta personal : Marcar que no.
 
-![UbuntuServer_21](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_21.PNG)
-![UbuntuServer_22](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_22.PNG)
-![UbuntuServer_23](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_23.PNG)
-![UbuntuServer_24](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_24.PNG)
-![UbuntuServer_25](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_25.PNG)
+![Creación de la MV 21](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_21.PNG)
+![Creación de la MV 22](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_22.PNG)
+![Creación de la MV 23](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_23.PNG)
+![Creación de la MV 24](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_24.PNG)
+![Creación de la MV 25](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_25.PNG)
 
 ### Configuración del NTP ###
 
 Veremos más adelante en que consiste este servicio, por ahora teneis que tener en cuenta que es el que mantiene en hora el servidor, ajustandolo a los horarios de verano/invierno y preguntando a los relojes atómicos cual es la fecha *exacta* en cada momento. Esto es especialmente importante si vamos a usar *kerberos* como mecanismo de autenticación, ya que este sistema de seguridad es muy estricto con los tiempos.
 
-![UbuntuServer_26](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_26.PNG)
-![UbuntuServer_27](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_27.PNG)
+![Creación de la MV 26](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_26.PNG)
+![Creación de la MV 27](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_27.PNG)
 
 
 ### Configuracion de los discos - Particionado ###
 
 A continuación vemos un particionado básico, en el caso de esta máquina virtual al no tener nada instalado es una configuración sencilla.
 
-![UbuntuServer_28](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_28.PNG)
-![UbuntuServer_29](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_29.PNG)
-![UbuntuServer_30](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_30.PNG)
-![UbuntuServer_31](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_31.PNG)
-![UbuntuServer_32](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_32.PNG)
-![UbuntuServer_33](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_33.PNG)
+![Creación de la MV 28](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_28.PNG)
+![Creación de la MV 29](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_29.PNG)
+![Creación de la MV 30](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_30.PNG)
+![Creación de la MV 31](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_31.PNG)
+![Creación de la MV 32](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_32.PNG)
+![Creación de la MV 33](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_33.PNG)
 
 ### Copia del sistema a la raiz ###
 
 Una vez particionado y listo, el sistema se copia a la carpeta raiz */* para los futuros arranques.
 
-![UbuntuServer_34](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_34.PNG)
+![Creación de la MV 34](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_34.PNG)
 
 
 ### Configuración del proxy en apt ###
 
 En el caso de se esté usando un proxy para aprovechar el ancho de banda disponible, es conveniente configurarlo en este momento. En nuestro caso la configuración será vacia, ya que no utilizamos ninguno.
 
-![UbuntuServer_35](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_35.PNG)
+![Creación de la MV 35](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_35.PNG)
 
 \newpage
 ### Configuración de tasksel y las actualizaciones automáticas ###
@@ -193,31 +193,31 @@ A continuación vemos algunos (no os preocupeis que volveremos a ver esta pantal
  * ...
 
 
-![UbuntuServer_36](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_36.PNG)
-![UbuntuServer_37](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_37.PNG)
-![UbuntuServer_38](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_38.PNG)
-![UbuntuServer_39](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_39.PNG)
+![Creación de la MV 36](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_36.PNG)
+![Creación de la MV 37](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_37.PNG)
+![Creación de la MV 38](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_38.PNG)
+![Creación de la MV 39](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_39.PNG)
 
 
 ### Instalación del GRUB ###
 
 El gestor de arranque en GNU/LinuX que está más extendido es GRUB (versiones 1 y 2). Veremos en clase en que consiste y como modificarlo. Por ahora basta que le digamos que queremos instalarlo en el registro principal de arranque (**MBR**)
 
-![UbuntuServer_40](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_40.PNG)
-![UbuntuServer_41](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_41.PNG)
+![Creación de la MV 40](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_40.PNG)
+![Creación de la MV 41](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_41.PNG)
 
 
 ### Terminando la instalación ###
 
 El mensaje que veremos es bastante explicativo...
 
-![UbuntuServer_42](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_42.PNG)
-![UbuntuServer_43](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_43.PNG)
+![Creación de la MV 42](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_42.PNG)
+![Creación de la MV 43](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_43.PNG)
 
 
 ### Iniciando el nuevo sistema ###
 
 Y ya tenemos nuestro *Ubuntu Server* perfectamente configurado
 
-![UbuntuServer_44](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_44.PNG)
-![UbuntuServer_45](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_45.PNG)
+![Creación de la MV 44](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_44.PNG)
+![Creación de la MV 45](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_01/InstalacionUbuntuServer/UbuntuServer_45.PNG)
