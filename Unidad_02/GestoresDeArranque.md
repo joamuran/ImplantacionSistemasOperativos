@@ -22,23 +22,8 @@ En los ordenadores compatibles actuales el proceso de carga de un sistema operat
   6. Inicializar, en su caso, el sistema de disquete (**OBSOLETO**)
   7. Inicializar el sistema IDE, S-ATA o SCSI. (Discos duros, CDROMS, etc.).
 
-4. A continuación la BIOS recorre la memoria en busca de la posible existencia de otros programas en ROM para ver si alguno tiene BIOS, lo que ocurre por ejemplo, con los controladores de disco duro IDE/ATA, cuyas
-BIOS se encuentran en la dirección C8000h; otros elementos que suelen
-contar con sus propias BIOS son las tarjetas de red y las controladoras
-SCSI. Estos módulos son cargados y ejecutados.
-5. A continuación, el BIOS muestra su pantalla principal (generalmente con
-los créditos del fabricante número de versión y fecha). Como hemos visto, la
-BIOS realiza una especie de inventario del sistema y algunas pruebas para
-verificar que su funcionamiento es correcto, y en esta pantalla muestra un
-resumen de los mismos.
-En los PC originales la configuración del hardware disponible se efectuaba
-mediante interruptores ("Jumpers") situados en la placa-base. Hoy en día se
-utiliza el estándar PnP (Plug and Play), que es capaz por sí misma de detectar y configurar los dispositivos conectados, asignándoles los recursos
-necesarios y mostrando un mensaje en pantalla por cada uno instalado.
-La última instrucción del programa POST se encarga de buscar otro
-programa que pueda ser cargado en el procesador del PC para que se
-encargue de seguir arrancando el sistema informático, normalmente
-cargando ya un sistema operativo.
-¿Pero dónde buscará el POST el programa a cargar? Y en caso de que
-existan varios sistemas operativos en varios soportes, ¿cuál de ellos será el
-elegido?
+4. A continuación la BIOS recorre la memoria en busca de la posible existencia de otros programas en ROM para ver si alguno tiene BIOS, lo que ocurre por ejemplo, con los controladores de disco duro IDE/ATA, cuyas BIOS se encuentran en la dirección C8000h; otros elementos que suelen contar con sus propias BIOS son las tarjetas de red y las controladoras SCSI. Estos módulos son cargados y ejecutados.
+5. A continuación, el BIOS muestra su pantalla principal (generalmente con los créditos del fabricante número de versión y fecha). Como hemos visto, la BIOS realiza una especie de inventario del sistema y algunas pruebas para verificar que su funcionamiento es correcto, y en esta pantalla muestra un resumen de los mismos. En los PC originales la configuración del hardware disponible se efectuaba mediante interruptores ("Jumpers") situados en la placa-base. Hoy en día se utiliza el estándar PnP (Plug and Play), que es capaz por sí misma de detectar y configurar los dispositivos conectados, asignándoles los recursos necesarios y mostrando un mensaje en pantalla por cada uno instalado.
+
+La última instrucción del programa POST se encarga de buscar otro programa que pueda ser cargado en el procesador del PC para que se
+encargue de seguir arrancando el sistema informático, normalmente cargando ya un sistema operativo. ¿Pero dónde buscará el POST el programa a cargar? Y en caso de que existan varios sistemas operativos en varios soportes, ¿cuál de ellos será el elegido?
