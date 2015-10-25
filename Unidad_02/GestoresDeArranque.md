@@ -1,3 +1,4 @@
+\newpage
 # Gestores de Arranque
 
 Arranque de un Sistema Informático.

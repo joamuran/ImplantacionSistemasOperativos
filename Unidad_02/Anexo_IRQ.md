@@ -23,12 +23,12 @@ Antes que los dispositivos **PnP** (*Plug and Play* (enchufa y funciona))llegara
 ¿Como se asignan? Simplemente se usa esta tabla que sirve como referencia o según las especificaciones de hardware:
 
 | IRQ | Descripción |
-| :------|-------:|
+| :------|:-------|
 |IRQ 0| cronómetro del sistema.|
 |IRQ 1| controlador del teclado.|
 |IRQ 2| Interrupciones en cascada para las interrupciones IRQ del 8 al 15.|
-|IRQ 3| Segundo Puerto Serie (COM2). A menudo es también para el cuarto puerto serie (COM4).|
-|IRQ 4| Primer Puerto Serie (COM1). También es utilizado por defecto para el COM3.|
+|IRQ 3| Segundo Puerto Serie (COM2/COM4).|
+|IRQ 4| Primer Puerto Serie (COM1/COM3).|
 |IRQ 5| Tarjeta de sonido.|
 |IRQ 6| Controlador de disquetera.|
 |IRQ 7| Puerto Paralelo LPT1 (impresoras).|
