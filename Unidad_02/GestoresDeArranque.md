@@ -225,6 +225,7 @@ Linux no cuenta con un gestor de arranque propio, sino que permite usar cualquie
 El GRand Unified Bootloader (*GRUB*) es un gestor de arranque múltiple que se usa comúnmente para iniciar dos o más sistemas operativos instalados en un mismo ordenador. Otros gestores de arranque usados en Linux son el syslinux y el lilo.
 
 Su proceso de inicio es el siguiente:
+
 1. La **BIOS** busca un dispositivo de inicio (como el disco duro) y pasa el control al registro maestro de inicio (Máster Boot Record, *MBR*, los primeros 512 bytes del disco duro).
 2. El *MBR* contiene la fase 1 de  *GRUB*. Como el *MBR* es pequeño (512 bytes), la fase 1 sólo carga la siguiente fase del  *GRUB* (ubicado físicamente en cualquier parte del disco duro). La fase 1 puede cargar ya sea la fase 1.5 o directamente la 2
 3. *GRUB* fase 1.5 está ubicada en los siguientes 30 kilobytes del disco duro. La fase 1.5 carga la fase 2.
