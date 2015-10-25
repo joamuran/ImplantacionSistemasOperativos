@@ -2,7 +2,16 @@
 
 # Gestores de Arranque
 
-Arranque de un Sistema Informático.
+## Importante
+ * Entender el proceso de arranque del equipo.
+ * Saber solucionar los problemas más habituales de arranque.
+ * Seleccionar un dispositivo diferente para arrancar desde ahí.
+ * Como se le indica al sistema que quiero arrancar con determinado SO.
+ * Entender como están organizados los discos duros.
+ *
+
+## Arranque de un Sistema Informático.
+
 Ya hemos visto anteriormente que el hardware, por si solo es totalmente incapaz de realizar ninguna acción, necesita un software que le indique que tiene que hacer. Cuando encendemos un sistema informático, estamos poniendo en marcha hardware, por lo que se necesitan medios especiales para hacer que se cargue un primer software.
 
 Actualmente podemos encontrar dos tipos de **BIOS**: EFI (UEFI) y **BIOS**. Trataremos el arranque primero en las **BIOS**, ya que muchos conceptos son más sencillos de entender en las **BIOS** tradicionales que en las nuevas EFI (UEFI).
@@ -52,76 +61,46 @@ Para desactivar los discos duros, hay que entrar en la primera opción de la BIO
 
 Pero con esto conseguimos indicar al sistema informático que disco duro quiero utilizar para el arranque del sistema... pero resulta que en un solo disco duro puedo tener instalado más de un sistema operativo.
 
+\newpage
+## Organización lógica de un disco duro.
 
-
-¿Cómo se le indica al sistema que quiero arrancar con Windows XP, o con
-Linux, o con Beos si todos estos SO están instalados en el mismo disco
-duro?
-Para entender esto tenemos que comprender bien como está organizado un
-disco duro.
-Organización lógica de un disco duro.
 La estructura lógica de los discos duros es la siguiente:
-1.
-Tienen una tabla de particiones en el primer sector.
-2.
-Pueden crearse de una a cuatro particiones.
-3.
-Cada partición tiene su propio sector de arranque.
-Las   particiones   son   divisiones   lógicas   efectuadas   en   un   disco   duro.
-Responden   a   una   necesidad
-muy     importante     en
-informática:   compartir   un
-mismo disco duro para varios
-sistemas   operativos.   Cada
-partición tiene la estructura
-lógica correspondiente a su
-sistema   operativo.   Una
-partición   de   Windows   98
-contiene sector de arranque,
-FAT, directorio raíz y área
-de   datos,   una   partición
-NTFS   tiene   su   sector   de
-arranque   y   MFT,   etc.   Los
-datos de una partición no se mezclan con los de otra.
-En un disco duro podemos tener hasta 4 particiones como máximo. De las 4,
-solo una puede estar definida como activa al mismo tiempo. Esta partición
-TEMA 4
-Página.
-12
-Prácticas comunes en los Sistemas Operativos.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
-activa será la que cargue el sistema operativo cuando iniciamos el sistema
+
+ * Tienen una tabla de particiones en el primer sector.
+ * Pueden crearse de una a cuatro particiones.
+ * Cada partición tiene su propio sector de arranque.
+
+Las   particiones   son   divisiones   lógicas   efectuadas   en   un   disco   duro. Responden   a   una   necesidad muy     importante     en informática:   compartir   un mismo disco duro para varios sistemas   operativos.   Cada partición tiene la estructura lógica correspondiente a su sistema   operativo.   
+
+### Partición Windows XP en FAT32 :
+
+ * sector de arranque.
+ * FAT
+ * directorio raíz
+ * área de   datos
+
+### Particiones NTFS de Windows 7:
+ * sector   de arranque   y   
+ * sector de MFT
+ * etc.
+
+Sin embargo los datos de una partición no se mezclan con los de otra.
+
+En un disco duro con una BIOS **distinta a EFI** podemos tener hasta 4 particiones **primarias** como **máximo**. De las 4, solo una puede estar definida como activa al mismo tiempo. Esta partición activa será la que cargue el sistema operativo cuando iniciamos el sistema
 informático.
-En el primer sector de todo disco duro no se sitúa un sector de arranque
-(puede haber un sector de arranque por cada partición, por lo que es posible
-que en un disco duro existan 4 sectores de arranque), en su lugar se sitúa
-una   tabla   de   particiones   (Master   Boot   Record   o   MBR).   Esta   tabla   de
-particiones incluye una tabla donde definimos las 4 particiones que pueden
-estar presentes en nuestro disco duro y un pequeño programa que permite
-localizar   la   partición   activa,   leer   su   sector   de   arranque   y   usarlo   para
-arrancar nuestro sistema informático.
-Este MBR (Master Boot Record) está situada en el primer sector del disco
-duro,   de  modo  que   su tamaño  es de  512 bytes.  En  esta capacidad  se
-almacena lo siguiente por cada MBR:
-Vemos como existe un programa al principio conocido como programa MBR o
-gestor de arranque que ocupa 445 Bytes.
-Un programa MBR estándar, leerá la tabla de particiones y escogerá de cual
-de esas particiones va a arrancar el sistema operativo. No lo hará como
-podría parecer lógico de la primera partición, sino de la partición primaria
-que esta marcada como activa. El MBR lee el primer sector de esa partición,
-y le cede el control de la CPU a ese programa (Boot Sector).
-Hay que indicar que no existe un programa MBR estándar. En realidad, el
-código que se encuentra aquí, puede ser muy variado, aunque normalmente
-todos son compatibles. Podemos instalar programas MBR conocidos como
-gestores de arranque que amplían las posibilidades el gestor de arranque
-MBR instalado por defecto.
-Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco
-duro, se lee el primer sector (MBR) y este a su vez, lee un segundo sector
-(Boot   Sector).Vemos   también   como   existen   4  entradas   para   almacenar
-TEMA 4
-Página.
-13
-Prácticas comunes en los Sistemas Operativos.
+
+En el primer sector de todo disco duro no se sitúa un sector de arranque (puede haber un sector de arranque por cada partición, por lo que es posible que en un disco duro existan 4 sectores de arranque), en su lugar se sitúa una   tabla   de   particiones   (Master   Boot   Record   o   MBR).   Esta   tabla   de particiones incluye una tabla donde definimos las 4 particiones que pueden estar presentes en nuestro disco duro y un pequeño programa que permite localizar   la   partición   activa,   leer   su   sector   de   arranque   y   usarlo   para arrancar nuestro sistema informático.
+
+Este MBR (Master Boot Record) está situada en el primer sector del disco duro,   de  modo  que   su tamaño  es de  512 bytes.  En  esta capacidad  se almacena lo siguiente por cada MBR:
+
+Vemos como existe un programa al principio conocido como programa MBR o gestor de arranque que ocupa 445 Bytes.
+
+Un programa MBR estándar, leerá la tabla de particiones y escogerá de cual de esas particiones va a arrancar el sistema operativo. No lo hará como podría parecer lógico de la primera partición, sino de la partición primaria que esta marcada como activa. El MBR lee el primer sector de esa partición, y le cede el control de la CPU a ese programa (Boot Sector).
+
+Hay que indicar que no existe un programa MBR estándar. En realidad, el código que se encuentra aquí, puede ser muy variado, aunque normalmente todos son compatibles. Podemos instalar programas MBR conocidos como gestores de arranque que amplían las posibilidades el gestor de arranque MBR instalado por defecto.
+
+Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco duro, se lee el primer sector (MBR) y este a su vez, lee un segundo sector (Boot   Sector).Vemos   también   como   existen   4  entradas   para   almacenar
+
 Dirección.
 Contenido.
 Tipo.
