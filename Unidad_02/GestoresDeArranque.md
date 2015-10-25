@@ -1,35 +1,20 @@
 # Gestores de Arranque
 
 Arranque de un Sistema Informático.
-Ya hemos visto anteriormente que el hardware, por si solo es totalmente incapaz de realizar ninguna acción, necesita un software que le indique que tiene   que   hacer.   Cuando   encendemos   un   sistema   informático,   estamos poniendo en marcha hardware, por lo que se necesitan medios especiales para hacer que se cargue un primer software. 
+Ya hemos visto anteriormente que el hardware, por si solo es totalmente incapaz de realizar ninguna acción, necesita un software que le indique que tiene   que   hacer.   Cuando   encendemos   un   sistema   informático,   estamos poniendo en marcha hardware, por lo que se necesitan medios especiales para hacer que se cargue un primer software.
 
-ARRANQUE INICIAL. POST
-En los ordenadores compatibles actuales el proceso de
-carga de un sistema operativo cualquiera se compone de
-una serie de pasos que se inician cuando se enciende o
-reinicia el ordenador. El proceso comienza siempre en la
-BIOS, y salvando algunas pequeñas variaciones que puede
-haber en función de cada fabricante de hardware y de la
-propia BIOS, el desarrollo paso a paso de esta secuencia es el siguiente:
-1. Cuando  se da tensión a la fuente de alimentación y una vez  
-que  la
-alimentación   se   estabiliza,   genera   una   señal   denominada
-“
-Power Good
-” en uno de los cables que va de la fuente de
-alimentación a la placa base; esta señal es recibida en el juego
-de chips instalado en la referida placa, y a su vez generan una
-señal de reinicio (
-reset
-) al
-procesador
-. La finalidad de este
-proceso   es   evitar   que   el   procesador   arranque
-prematuramente, cuando las tensiones de alimentación no son
-todavía correctas, lo que podría producir daños en el hardware.
-Es el mismo sistema que se utiliza para un reinicio en caliente cuando pulsa
-en el botón marcado "Reset".
-2.   El   procesador   arranca   cuando   se   retira   la   señal   de   reset.   En   este
+Actualmente podemos encontrar dos tipos de BIOS: EFI (UEFI) y BIOS. Trataremos el arranque primero en las BIOS, ya que muchos conceptos son más sencillos de entender en las BIOS tradicionales que en las nuevas EFI (UEFI).
+
+## Arranque Inicial. POST
+En los ordenadores compatibles actuales el proceso de carga de un sistema operativo cualquiera se compone de una serie de pasos que se inician cuando se enciende o reinicia el ordenador. El proceso comienza siempre en la BIOS, y salvando algunas pequeñas variaciones que puede haber en función de cada fabricante de hardware y de la propia BIOS, el desarrollo paso a paso de esta secuencia es el siguiente:
+
+1. Cuando  se da tensión a la fuente de alimentación y una vez que  la alimentación   se   estabiliza,   genera   una   señal   denominada **Power Good** en uno de los cables que va de la fuente de alimentación a la placa base; esta señal es recibida en el juego
+de chips instalado en la referida placa, y a su vez generan una señal de reinicio (reset) al procesador.
+
+La finalidad de este proceso   es   evitar   que   el   procesador   arranque prematuramente, cuando las tensiones de alimentación no son
+todavía correctas, lo que podría producir daños en el hardware. Es el mismo sistema que se utiliza para un reinicio en caliente cuando pulsa en el botón marcado "Reset".
+
+2. El   procesador   arranca   cuando   se   retira   la   señal   de   reset.   En   este
 momento no existe en su memoria ninguna instrucción o dato, por lo que no
 puede   hacer   absolutamente   nada.   Para   salvar   este   obstáculo,   los
 fabricantes   incluyen   en   la   circuitería   (hardware)   de   la   placa   base   un
