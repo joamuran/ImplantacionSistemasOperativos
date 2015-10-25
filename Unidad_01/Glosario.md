@@ -6,13 +6,13 @@ Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Ter
 | :------|:------:|-------:|
 | lsb_release -a | Mostrar versión de GNU/LinuX | Si |
 | df -h | Muestra el uso del disco duro | Si |
-| free -m | Muestra el uso de la memória RAM | Si| 
-| top | Lista los procesos activos y el uso de la CPU | Si | 
+| free -m | Muestra el uso de la memória RAM | Si|
+| top | Lista los procesos activos y el uso de la CPU | Si |
 | dpkg -l | Lista los paquetes instalados en el sistema | Debian/++ |
 | dpkg -i ruta_al_deb.deb | Instalar un paquete deb | Debian/++ |
 | dpkg -r nombre_paquete | Desinstalar un paquete deb | Debian/++ |
 
-### Gestión de permisos y usuarios### 
+### Gestión de permisos y usuarios###
 
 | Comando | Descripción | Común en LinuX |
 | :------|:------:|-------:|
@@ -36,4 +36,3 @@ Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Ter
 | adduser [usuario] | Crea un usuario en el sistema | Si|
 | adduser usuario grupo | Añade al grupo el usuario | Si|
 | addgroup [grupo] | Añade el grupo al sistema | Si|
-
