@@ -70,6 +70,10 @@ La estructura lógica de los discos duros es la siguiente:
  * Pueden crearse de una a cuatro particiones.
  * Cada partición tiene su propio sector de arranque.
 
+![Organizacion HD](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/OrganizacionHD.PNG)
+
+\newpage
+
 Las   particiones   son   divisiones   lógicas   efectuadas   en   un   disco   duro. Responden   a   una   necesidad muy     importante     en informática:   compartir   un mismo disco duro para varios sistemas   operativos.   Cada partición tiene la estructura lógica correspondiente a su sistema   operativo.   
 
 ### Partición Windows XP en FAT32 :
@@ -99,156 +103,33 @@ Un programa MBR estándar, leerá la tabla de particiones y escogerá de cual de
 
 Hay que indicar que no existe un programa MBR estándar. En realidad, el código que se encuentra aquí, puede ser muy variado, aunque normalmente todos son compatibles. Podemos instalar programas MBR conocidos como gestores de arranque que amplían las posibilidades el gestor de arranque MBR instalado por defecto.
 
-Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco duro, se lee el primer sector (MBR) y este a su vez, lee un segundo sector (Boot   Sector).Vemos   también   como   existen   4  entradas   para   almacenar
+\newpage
+Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco duro, se lee el primer sector (MBR) y este a su vez, lee un segundo sector (Boot   Sector).Vemos   también   como   existen   4  entradas   para   almacenar hasta 4 particiones. De aquí viene el límite de 4 particiones para un disco duro. Por cada una de estas entradas de 16 Bytes se almacena lo siguiente:
 
-Dirección.
-Contenido.
-Tipo.
-+000h
-Programa MBR.
-445 Bytes.
-+1BEh
-1º  entrada  de  la  tabla  de
-particiones
-16 Bytes
-+1CEh
-2º  entrada  de  la  tabla  de
-particiones
-16 Bytes
-+1DEh
-3º  entrada  de  la  tabla
-de
-particiones
-16 Bytes
-+1EEh
-4º  entrada  de  la  tabla  de
-particiones
-16 Bytes
-+1FEh
-Identificación (AA55h)
-2 Bytes
-Contenido del Master Boot Record o MBR.
-Longitud = 200h = 512 Bytes.
-El código AA55h marca este sector como ejecutable.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
-hasta 4 particiones. De aquí viene el límite de 4 particiones para un disco
-duro. Por cada una de estas entradas de 16 Bytes se almacena lo siguiente:
-Vemos el  1
-er
-campo que se usa para indicar si esta partición es la activa o no.
-El 2º y 3º campo se usan para indicar el cilindro, sector y cabeza donde
-comienza la partición.
-El 4º campo se usa para almacenar el tipo de la partición, aquí se indica que
-sistema operativo esta instalado en la partición, si dicha partición esta
-oculta o no, etc.
-El 5º y 6º campo se usan para indicar el cilindro, sector y cabeza donde
-termina la partición.
-El 7º campo indica la dirección del primer sector de la partición (el sector
-de   arranque)   para   que   el   POST   pueda   pasarle   el   control.   Este   sector
-siempre es el 1º sector de la partición, pero aquí indicamos su valor director
-(nº de sector) y no la combinación cilindro, sector y cabeza. Esto se hace
-para que el acceso al sector de arranque sea más rápido, y para evitar
-posibles errores en la carga del sistema.
-El 8º campo se usa para almacenar el número total de sectores que existen
-en la partición. Es un campo que se usa para comprobar que los datos de la
-partición son correctos.
+| Dirección | Contenido| Tipo|
+|-----------|----------|-----|
+|+000h|Programa MBR.|445 Bytes.|
+|+1BEh |1º  entrada  de  la  tabla  de particiones|16 Bytes|
+|+1CEh |2º  entrada  de  la  tabla  de particiones|16 Bytes|
+|+1DEh |3º  entrada  de  la  tabla de particiones| 16 Bytes|
+|+1EEh |4º  entrada  de  la  tabla  de particiones|16 Bytes|
+|+1FEh| Identificación (AA55h)| 2 Bytes|
+
+*Contenido del Master Boot Record o MBR.*
+*Longitud = 200h = 512 Bytes.*
+*El código AA55h marca este sector como ejecutable.*
+
+## Tipos de particiones
+
 Las particiones de un disco duro pueden ser de dos tipos:
-1.
-Primarias
-2.
-Extendidas.
-En un disco duro puede haber 4 particiones como máxima, lo que implica que
-puede haber 4 particiones primarias como máximo. Sin embargo, no puede
-TEMA 4
-Página.
-14
-Prácticas comunes en los Sistemas Operativos.
-Dirección.
-Contenido.
-Tipo.
-+00h
-Estado de la partición:
-00h
-–
- Inactiva
-80h
-–
- arranque (activa)
-1 Byte
-+01h
-Cabeza de lectura / escritura donde comienza la partición.
-1 Byte
-+02h
-Sector y cilindro do
-nde comienza la partición.
-2 Bytes
-+04h
-Tipo de partición:
-00h
-–
- Libre
-01h
-–
- DOS con la vieja FAT de 12 bits.
-02h
-–
- XENIX
-03h
-–
- XENIX
-04h
-–
- DOS con FAT 16
-05h
-–
- Partición extendida.
-06h
-–
- Partición DOS > 32 Megas.
-0Bh
-–
- Windows FAT32
-0Ch
-–
- Windows FAT 32
-LBA
-0Eh
-–
- VFAT
-16h
-–
- Hidden FAT 16 (Oculta)
-63h
-–
- Unix
-65h
-–
- Novell Netware
-Etc.....
-1 Byte
-+05h
-Cabeza de lectura / escritura donde termina la partición.
-1 Byte
-+06h
-Sector y cilindro donde termina la partición.
-2 Bytes
-+08h
-Dirección del primer sector
- de la partición. (Sector de arranque).
-4 Bytes
-+0Ch
-Número de sectores en esta partición.
-4 Bytes
-Contenido de cada una de las 4 entradas de la tabla de particiones.
-Longitud = 10h = 16 Bytes.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
-oficialmente por la propia Microsoft, y existen multitud de programas de
-terceras compañías que permiten retocar esta
- tabla de particiones. (No es
-recomendable el uso de dichas herramientas pues pueden estropear la tabla,
-y suelen dar problemas a la larga). En la familia Windows 2008, Vista,
-Windows 7 encontramos también una herramienta de línea de comandos que
-permite gestionar las particiones, diskpart.exe.
+
+  1. Primarias
+  2. Extendidas
+
+En un disco duro puede haber 4 particiones como máxima, lo que implica que puede haber 4 particiones primarias como máximo (ya lo hemos dicho antes). Sin embargo, no puede oficialmente por la propia Microsoft, y existen multitud de programas de terceras compañías que permiten retocar esta  tabla de particiones. (No es recomendable el uso de dichas herramientas pues pueden estropear la tabla, y suelen dar problemas a la larga). En la familia Windows 2008, Vista, Windows 7, 8.1, 10 encontramos también una herramienta de línea de comandos que permite gestionar las particiones, diskpart.exe.
+
+![Diskpart](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/Diskpart.PNG)
+
 Linux por su parte incluye varios programas de este tipo, como pueden ser
 fdisk, qtparted, parted, etc.
 Los Windows modernos (a partir de ahora les llamaremos Windows de la
@@ -282,11 +163,9 @@ Linux por su parte no presenta problemas de este tipo, ya que no asigna
 letras a los volúmenes, en su lugar tenemos que montar cada volumen en una
 directorio de nuestro árbol de directorios, por lo que no le afectan los
 problemas de nominación de volúmenes.
-TEMA 4
-Página.
-17
-Prácticas comunes en los Sistemas Operativos.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
+
+
+
 Hay que tener mucho cuidado al trabajar con las particiones. La tabla MBR
 es una tabla muy sensible a cualquier tipo de cambios. Una mala elección de
 cualquiera de sus campos, puede llevar a la inutilización total del disco duro.
@@ -294,6 +173,7 @@ Además,   dada   la  facilidad   para   “trastear”   con   la   tabla   de 
 muchos programas utilizan configuraciones extrañas que son desconocidas
 para otros programas, lo que puede llevar a perder particiones o a cambiar
 su tamaño de modo incorrecto.
+
  Arranque de Windows XP/2000/ 2003
 1.
 Se carga y ejecuta el POST
@@ -332,11 +212,6 @@ sistema   aunque   el   disco   duro   haya   sufrido   algún
 problema. Sin embargo, no se puede confundir este
 “disco de inicio” con un “disco de arranque”. Cuando
 llegue el momento de cargar NTOSKRNL.EXE si no se
-TEMA 4
-Página.
-18
-Prácticas comunes en los Sistemas Operativos.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
 encuentra, el sistema se detendrá y no arrancará, y por el tamaño de dicho
 fichero y de todos los que necesita para trabajar, es imposible copiarlo en
 un volumen si no es de gran tamaño.
@@ -352,6 +227,8 @@ o por que se haya borrado todo el volumen.
 Sin embargo, un mensaje “falta ntoskrnl.exe” nos indicaría que si existe un
 fichero   ntldr,   pero   que   en   nuestro   directorio   de   Windows   no   se   ha
 encontrado un fichero NTOSKRNL.EXE.
+
+
 Arranque de Windows vista/2008/siete
 La secuencia de arranque de Windows Vista, Windows 2008 y Windows 7 es
 distinta de anteriores versiones de Windows. La principal diferencia estriba
@@ -377,11 +254,6 @@ bootmgr.
 6. bootmgr lee la base de datos
 BCD
 y muestra un menú si es necesario
-TEMA 4
-Página.
-19
-Prácticas comunes en los Sistemas Operativos.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
 7. El usuario selecciona un sistema operativo del menú, o se carga por
 defecto uno de ellos
 8. bootmgr carga
@@ -400,6 +272,8 @@ bcedit.exe
 utilidad grafica de una 3rd party (tercera compañía, una compañía distinta a
 la que realiza el sistema) como puede ser EasyBCD que permite configurar
 muchas más opciones que el bcedit.exe y de forma mucho más fácil.
+
+
 Arranque de un Linux. Ubuntu.
 Linux no cuenta con un gestor de arranque propio, sino que permite usar
 cualquier   gestor   de   arranque   que   deseemos.   El   que   se   suele   incluir
@@ -421,11 +295,6 @@ ya sea la fase 1.5 o directamente la 2
 3.
 GRUB fase 1.5 está ubicada en los siguientes 30 kilobytes del disco
 duro. La fase 1.5 carga la fase 2.
-TEMA 4
-Página.
-20
-Prácticas comunes en los Sistemas Operativos.
-IMPLANTACIÓN DE SISTEMAS OPERATIVOS
 4.
 GRUB fase 2 (cargada por las fases 1 ó 1.5) recibe el control, y
 presenta   al   usuario   el   menú   de   inicio   de   GRUB.   Este   menú   se
