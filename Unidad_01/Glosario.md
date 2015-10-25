@@ -1,3 +1,4 @@
+\newpage
 # Unidad 01: Ordenes del Terminal #
 
 Un breve resumen de las diferentes órdenes (Comandos) que hemos visto en el Terminal.
