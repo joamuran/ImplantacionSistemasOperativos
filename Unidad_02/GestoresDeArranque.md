@@ -43,6 +43,7 @@ En los ordenadores compatibles actuales el proceso de carga de un sistema operat
 La última instrucción del programa **POST** se encarga de buscar otro programa que pueda ser cargado en el procesador del PC para que se
 encargue de seguir arrancando el sistema informático, normalmente cargando ya un sistema operativo. ¿Pero dónde buscará el **POST** el programa a cargar? Y en caso de que existan varios sistemas operativos en varios soportes, ¿cuál de ellos será el elegido?
 
+\newpage
 ## Elección del Sistema Operativo
 
 En este punto en el que estamos el programa que está en la CPU es el **POST**, y ya ha concluido todo su trabajo. Pero si dicho programa simplemente liberará la CPU, el equipo se quedaría colgado ya que ningún otro software entraría en el microprocesador. Por ello, la última misión del **POST** es buscar otro programa, y cargarlo en la CPU antes de liberarla.
@@ -101,14 +102,12 @@ En el primer sector de todo disco duro no se sitúa un sector de arranque (puede
 
 Este *MBR* (Master Boot Record) está situada en el primer sector del disco duro, de modo que su tamaño es de 512 bytes. En esta capacidad se almacena lo siguiente por cada *MBR*:
 
-Vemos como existe un programa al principio conocido como programa *MBR* o gestor de arranque que ocupa 445 Bytes.
-
 Un programa *MBR* estándar, leerá la tabla de particiones y escogerá de cual de esas particiones va a arrancar el sistema operativo. No lo hará como podría parecer lógico de la primera partición, sino de la partición primaria que esta marcada como activa. El *MBR* lee el primer sector de esa partición, y le cede el control de la CPU a ese programa (Boot Sector).
 
 Hay que indicar que no existe un programa *MBR* estándar. En realidad, el código que se encuentra aquí, puede ser muy variado, aunque normalmente todos son compatibles. Podemos instalar programas *MBR* conocidos como gestores de arranque que amplían las posibilidades el gestor de arranque *MBR* instalado por defecto.
 
 \newpage
-Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco duro, se lee el primer sector (*MBR*) y este a su vez, lee un segundo sector (Boot Sector).Vemos también como existen 4 entradas para almacenar hasta 4 particiones. De aquí viene el límite de 4 particiones para un disco duro. Por cada una de estas entradas de 16 Bytes se almacena lo siguiente:
+Si se arranca desde un disco duro, se lee el primer sector (*MBR*) y este a su vez, lee un segundo sector (Boot Sector).Vemos también como existen 4 entradas para almacenar hasta 4 particiones. De aquí viene el límite de 4 particiones para un disco duro. Por cada una de estas entradas de 16 Bytes se almacena lo siguiente:
 
 | Dirección | Contenido| Tipo|
 |-----------|----------|-----|
@@ -123,6 +122,7 @@ Hay que prestar atención a lo que se ha dicho. Si se arranca desde un disco dur
 *Longitud = 200h = 512 Bytes.*
 *El código AA55h marca este sector como ejecutable.*
 
+\newpage
 ## Tipos de particiones
 
 Las particiones de un disco duro pueden ser de dos tipos:
@@ -163,8 +163,7 @@ Linux por su parte incluye varios programas de este tipo, como pueden ser fdisk,
 
 Los Windows modernos (a partir de ahora les llamaremos Windows de la familia NT, o Windows NT) permiten indicar que letra de unidad se le asignará a cada partición, sin embargo DOS y Windows 95/98 asignaban estas letras por defecto. Primero, la C: es asignada a la partición primaria del primer disco donde se encuentre un sistema de ficheros FAT. Entonces la siguiente letra es asignada a la partición primaria con FAT del segundo disco, etc. Una vez acabadas con las particiones primarias de cada disco, se empiezan a asignar letras a las unidades lógicas del primer disco, luego a las unidades lógicas del segundo disco, etc. Una vez acabado con las unidades lógicas se continúa con el resto de particiones primarias que queden.
 
-Veamos un ejemplo sobre esto. Un usuario tiene un único disco duro dividido en una partición primaria (C:) y un volumen lógico en una partición extendida (D:). Ahora este mismo usuario compra un segundo disco duro y lo instala, creando en el otra partición primaria y otra partición extendida, conteniendo otro volumen lógico. Pues bien, después de encender el
-ordenador, la partición primaria del segundo disco se llama (D:). El volumen lógico del primer disco, que antes se llamaba D pasa a llamarse (E:) y por fin, el volumen lógico del segundo disco recibe el nombre de (F:). **¿Veis el lio?**
+  ``Veamos un ejemplo sobre esto. Un usuario tiene un único disco duro dividido en una partición primaria (C:) y un volumen lógico en una partición extendida (D:). Ahora este mismo usuario compra un segundo disco duro y lo instala, creando en el otra partición primaria y otra partición extendida, conteniendo otro volumen lógico. Pues bien, después de encender el ordenador, la partición primaria del segundo disco se llama (D:). El volumen lógico del primer disco, que antes se llamaba D pasa a llamarse (E:) y por fin, el volumen lógico del segundo disco recibe el nombre de (F:).``
 
 Este tipo de cambios era/es muy peligroso, ya que al cambiar los nombres de las unidades es muy probable que muchos programas dejen de funcionar. Indicar que puesto que las unidades de CD reciben el nombre las ultimas, si este usuario
 instalase ahora un lector de CD, recibiría el nombre de (G:). Las unidades de CD no *suelen* tener problemas asociados a los nombres / rutas de los ficheros que los contienen ya que incluyen rutas relativas.
@@ -177,6 +176,7 @@ Hay que tener mucho cuidado al trabajar con las particiones. La tabla *MBR* es u
 
 Además, dada la facilidad para “trastear” con la tabla de particiones, muchos programas utilizan configuraciones extrañas que son desconocidas para otros programas, lo que puede llevar a perder particiones o a cambiar su tamaño de modo incorrecto.
 
+\newpage
 ## Secuencias de arranque
 
 ### Arranque de Windows XP/2000/2003
@@ -199,7 +199,7 @@ Es **importante** conocer esta secuencia, para comprender los distintos errores 
 cometer y con los que nos podemos encontrar. Por ejemplo, si recibimos el mensaje “falta *NTLDR*” al intentar arrancar, está claro que se ha producido un error en el punto 4, lo que nos indicaría que se ha leído el *MBR*, el sector de arranque, y no se ha encontrado en el raíz de nuestro volumen el fichero *NTLDR*, bien porque lo hayan borrado o por que se haya borrado todo el volumen.
 Sin embargo, un mensaje “falta *NTOSKRNL.EXE*” nos indicaría que si existe un fichero *NTLDR*, pero que en nuestro directorio de Windows no se ha encontrado un fichero *NTOSKRNL.EXE*.
 
-
+\newpage
 ### Arranque de Windows vista/2008/siete
 La secuencia de arranque de Windows Vista, Windows 2008 y Windows 7 es distinta de anteriores versiones de Windows. La principal diferencia estriba en que se ha cambiado el gestor de arranque, ya no se usa el *NTLDR* sino que se usa el Windows Boot Manager (bootmgr).
 Mientras que el gestor *NTLDR* usaba un fichero de texto denominado boot.ini para configurar sus opciones, bootmgr utiliza una base de datos conocida como Boot Configuration Data (*BCD*) que no puede ser editada directamente como lo era el boot.ini ya que no es un fichero de texto.
@@ -217,7 +217,7 @@ El *BCD* es una base de datos con datos sobre la configuración del arranque que
 9. Winload.exe carga *NTOSKRNL.EXE* (Núcleo del sistema operativo o Kernel).
 10. *NTOSKRNL.EXE* lee el registro de Windows, y procede a ir cargando el sistema completo. Windows dispone de un comando para configurar esta base de datos *BCD*, el bcedit.exe.
 
-
+\newpage
 ### Arranque de un Linux. Ubuntu.
 
 Linux no cuenta con un gestor de arranque propio, sino que permite usar cualquier gestor de arranque que deseemos. El que se suele incluir actualmente en todas las versiones de Linux es el *GRUB*.
