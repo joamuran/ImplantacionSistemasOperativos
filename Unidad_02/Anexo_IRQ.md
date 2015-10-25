@@ -33,10 +33,10 @@ Antes que los dispositivos **PnP** (*Plug and Play* (enchufa y funciona))llegara
 |IRQ 6| Controlador de disquetera.|
 |IRQ 7| Puerto Paralelo LPT1 (impresoras).|
 |IRQ 8| Reloj del Sistema.|
-|IRQ 9 10, 11| Interrupción disponible para periféricos extras.|
+|IRQ 9 10 11| Interrupción disponible para periféricos extras.|
 |IRQ 12| Mouse PS/2 o Placa de Red o similares.|
 |IRQ 13| Coprocesador/Unidad de punto flotante|
-|IRQ 14| Canal IDE Primario. En sistemas que no se utiliza dispositivos IDE, este canal se utiliza para otros periféricos|
+|IRQ 14| Canal IDE Primario|
 |IRQ 15| Canal IDE Secundario|
 
 **No se pueden asignar dos dispositivos al mismo IRQ**
