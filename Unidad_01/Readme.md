@@ -20,7 +20,8 @@
 
 * [Instalación Ubuntu Desktop] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionUbuntuDesktop.md)
 * [Instalacion Ubuntu Server] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionUbuntuServer.md)
-
+* [Instalacion Debian 8] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionDebian8.md)
+* [Instalacion Windows 7] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionWindows7.md)
 
 ## Manuales
 
