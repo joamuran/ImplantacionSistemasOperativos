@@ -132,7 +132,7 @@ Las particiones de un disco duro pueden ser de dos tipos:
 
 En un disco duro puede haber 4 particiones como máxima, lo que implica que puede haber 4 particiones primarias como máximo (ya lo hemos dicho antes).
 
-Cada   partición   primaria   forma   un   volumen   (una   letra   de   unidad,   para entendernos) y tiene su propio sector de arranque.
+Cada partición primaria forma un volumen (una letra de unidad, para entendernos) y tiene su propio sector de arranque.
 
 ![MBR](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/MBR.PNG)
 
@@ -146,14 +146,14 @@ De esta manera, si dividimos un disco duro en una partición primaria (un volume
 
 Solo el sector de arranque de una partición primaria es válido para arrancar el sistema operativo. El sector de arranque de la partición extendida solo contiene información sobre las unidades lógicas que se encuentran dentro de ella (tamaños, comienzos y finales, etc.).
 
-La   tabla   del   *MBR*   identifica   la   localización   y   tamaño   de   la   partición extendida, pero no contiene información sobre las unidades lógicas creadas dentro  de  esta partición  extendida.  Ninguna  de  estas  unidades  lógicas pueden ser marcadas como activas, por lo que es posible que instalemos un sistema operativo en alguna de estas particiones lógicas, pero nunca podrá ser cargado  directamente, ya que no podemos marcar esa partición como activa, y por lo tanto no podemos indicar que sea el volumen de arranque. (Para   poder   instalar   sistemas   operativos   en   estas   unidades   lógicas, tendremos que usar un programa conocido como gestor de arranque que veremos posteriormente, estos gestores de arranque suelen guardar los programas   usados   para   cargar   los   sistemas   operativos   siempre   en   la partición activa del disco duro).
+La tabla del *MBR* identifica la localización y tamaño de la partición extendida, pero no contiene información sobre las unidades lógicas creadas dentro de esta partición extendida. Ninguna de estas unidades lógicas pueden ser marcadas como activas, por lo que es posible que instalemos un sistema operativo en alguna de estas particiones lógicas, pero nunca podrá ser cargado directamente, ya que no podemos marcar esa partición como activa, y por lo tanto no podemos indicar que sea el volumen de arranque. (Para poder instalar sistemas operativos en estas unidades lógicas, tendremos que usar un programa conocido como gestor de arranque que veremos posteriormente, estos gestores de arranque suelen guardar los programas usados para cargar los sistemas operativos siempre en la partición activa del disco duro).
 
 ![MBR 3](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/MBR_3.PNG)
 
 Hemos visto como el *MBR* se divide en dos partes bien diferenciadas, el programa *MBR* que ocupa la mayor parte del *MBR* y la tabla de particiones vista anteriormente.
 
 Existen diversos programas que nos permiten gestionar y retocar estos componentes del *MBR*.
-Así, en Windows tenemos el comando FIXMBR que reinstala el programa del *MBR*,   aunque   este   comando   solo   podemos   usarlo   desde   la   consola   de recuperación. (Ya veremos cómo acceder a dicha  consola  en otro tema)
+Así, en Windows tenemos el comando FIXMBR que reinstala el programa del *MBR*, aunque este comando solo podemos usarlo desde la consola de recuperación. (Ya veremos cómo acceder a dicha consola en otro tema)
 
 Sin embargo, no puede oficialmente por la propia Microsoft, y existen multitud de programas de terceras compañías que permiten retocar esta tabla de particiones. (No es recomendable el uso de dichas herramientas pues pueden estropear la tabla, y suelen dar problemas a la larga). En la familia Windows 2008, Vista, Windows 7, 8.1, 10 encontramos también una herramienta de línea de comandos que permite gestionar las particiones, diskpart.exe.
 
@@ -163,7 +163,7 @@ Linux por su parte incluye varios programas de este tipo, como pueden ser fdisk,
 
 Los Windows modernos (a partir de ahora les llamaremos Windows de la familia NT, o Windows NT) permiten indicar que letra de unidad se le asignará a cada partición, sin embargo DOS y Windows 95/98 asignaban estas letras por defecto. Primero, la C: es asignada a la partición primaria del primer disco donde se encuentre un sistema de ficheros FAT. Entonces la siguiente letra es asignada a la partición primaria con FAT del segundo disco, etc. Una vez acabadas con las particiones primarias de cada disco, se empiezan a asignar letras a las unidades lógicas del primer disco, luego a las unidades lógicas del segundo disco, etc. Una vez acabado con las unidades lógicas se continúa con el resto de particiones primarias que queden.
 
-  ``Veamos un ejemplo sobre esto. Un usuario tiene un único disco duro dividido en una partición primaria (C:) y un volumen lógico en una partición extendida (D:). Ahora este mismo usuario compra un segundo disco duro y lo instala, creando en el otra partición primaria y otra partición extendida, conteniendo otro volumen lógico. Pues bien, después de encender el ordenador, la partición primaria del segundo disco se llama (D:). El volumen lógico del primer disco, que antes se llamaba D pasa a llamarse (E:) y por fin, el volumen lógico del segundo disco recibe el nombre de (F:).``
+ ``Veamos un ejemplo sobre esto. Un usuario tiene un único disco duro dividido en una partición primaria (C:) y un volumen lógico en una partición extendida (D:). Ahora este mismo usuario compra un segundo disco duro y lo instala, creando en el otra partición primaria y otra partición extendida, conteniendo otro volumen lógico. Pues bien, después de encender el ordenador, la partición primaria del segundo disco se llama (D:). El volumen lógico del primer disco, que antes se llamaba D pasa a llamarse (E:) y por fin, el volumen lógico del segundo disco recibe el nombre de (F:).``
 
 Este tipo de cambios era/es muy peligroso, ya que al cambiar los nombres de las unidades es muy probable que muchos programas dejen de funcionar. Indicar que puesto que las unidades de CD reciben el nombre las ultimas, si este usuario
 instalase ahora un lector de CD, recibiría el nombre de (G:). Las unidades de CD no *suelen* tener problemas asociados a los nombres / rutas de los ficheros que los contienen ya que incluyen rutas relativas.
@@ -227,9 +227,48 @@ El GRand Unified Bootloader (*GRUB*) es un gestor de arranque múltiple que se u
 Su proceso de inicio es el siguiente:
 
 1. La **BIOS** busca un dispositivo de inicio (como el disco duro) y pasa el control al registro maestro de inicio (Máster Boot Record, *MBR*, los primeros 512 bytes del disco duro).
-2. El *MBR* contiene la fase 1 de  *GRUB*. Como el *MBR* es pequeño (512 bytes), la fase 1 sólo carga la siguiente fase del  *GRUB* (ubicado físicamente en cualquier parte del disco duro). La fase 1 puede cargar ya sea la fase 1.5 o directamente la 2
+2. El *MBR* contiene la fase 1 de *GRUB*. Como el *MBR* es pequeño (512 bytes), la fase 1 sólo carga la siguiente fase del *GRUB* (ubicado físicamente en cualquier parte del disco duro). La fase 1 puede cargar ya sea la fase 1.5 o directamente la 2
 3. *GRUB* fase 1.5 está ubicada en los siguientes 30 kilobytes del disco duro. La fase 1.5 carga la fase 2.
 4. *GRUB* fase 2 (cargada por las fases 1 ó 1.5) recibe el control, y presenta al usuario el menú de inicio de *GRUB*. Este menú se configura mediante la ejecución de unos scripts situados en /etc/grub.d y que acaban generando el fichero de grub.cfg que configura la imágen.
-5.  *GRUB* carga el kernel (núcleo) seleccionado por el usuario en la memoria y le pasa el control para que cargue el resto del sistema operativo.
+5. *GRUB* carga el kernel (núcleo) seleccionado por el usuario en la memoria y le pasa el control para que cargue el resto del sistema operativo.
 
  *GRUB* no es en realidad un gestor de arranque para Linux, sino un gestor de arranque para cualquier sistema operativo. De hecho, *GRUB* es perfectamente capaz de arrancar cualquier sistema operativo de la familia Windows sin ningún tipo de problemas
+
+### Recuperaciones de errores en el arranque
+
+El proceso de arranque es un concepto al que el administrador de sistemas debe prestarle mucha atención, dado que el más mínimo problema que se origine en dicho proceso, hará imposible que el sistema operativo arranque, y por lo tanto dejara inservible el sistema informático.
+
+Las zonas que hay que vigilar y conocer cómo recuperar si es necesario, son el MBR, el sector de arranque de la partición primaria activa y el programa gestor de arranque que este situado en dichas zonas.
+
+*¿Pero, que errores se pueden producir en el arranque?*
+
+En primer lugar debemos hablar de los fallos de hardware. Al usar un disco duro siempre existe la posibilidad de que se corrompan clústeres del mismo. Normalmente estos errores no suelen tener demasiada importancia, pero si se da la casualidad de que se corrompe el primer clúster del disco duro, que es donde se sitúa el sector del MBR y el primer sector de arranque de la primera partición, nos vamos a encontrar en serios problemas. Normalmente en estos casos lo mejor es cambiar el disco duro completo, e intentar recuperar la información que existía en el disco duro con algún programa de recuperación de datos profesional.
+
+
+En segundo lugar nos encontramos la acción del malware (virus, gusanos, troyanos, etc.). Estas amenazas pueden borrar el MBR y los sectores de arranque, y antiguamente existían bastantes virus que se dedicaban a realizar estas acciones. Hoy en día, y con la *profesionalizacion* de los desarrolladores de malware, estas prácticas han quedado relegadas al
+olvido.
+
+La tercera causa, y la que suele ser culpable en el 99% de los casos, es que directamente el usuario estropee el arranque de un sistema operativo, simplemente instalando un segundo operativo.
+
+Veamos con detalle esta situación:
+Hemos visto como cada sistema operativo cuenta con su propio programa para instalar en el MBR, su propio programa para instalar en el sector de arranque, y también cuentan con su propio gestor de arranque. Está claro que si instalamos en un mismo disco duro tres sistemas operativos distintos, cada uno de ellos habrá ido instalando su propio
+proceso de arranque, pero como solo puede existir un proceso de arranque en un disco duro (sólo existe un MBR) el proceso de arranque que se quede al final será el del ultimo sistema operativo instalado, que machacará el proceso de arranque del sistema operativo anteriormente instalado, y así sucesivamente.
+
+Imaginemos el caso siguiente: En un disco duro tenemos instalado una partición con Windows XP
+
+![problemas MBR](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/MBR_3.PNG)
+
+En el MBR tendremos instalado evidentemente el gestor de arranque de XP y en la partición de Windows XP tendremos instalado los archivos que necesita el gestor de arranque de XP para funcionar.
+
+Decidimos instalar en dicho disco duro una distribución de Linux como Debian, para lo cual le creamos una partición y procedemos a instalar dicho sistema operativo:
+Durante este proceso de instalación, Debian instalar en el MBR el gestor de arranque de Debian (en este caso grub), y por lo tanto machacará al gestor de arranque de XP que estaba anteriormente instalado en el MBR.
+
+![problemas MBR 2](https://raw.githubusercontent.com/aberlanas/ImplantacionSistemasOperativos/master/Unidad_02/GestorDeArranque/MBR_4.PNG)
+
+La próxima vez que iniciemos la máquina, se cargará el gestor de arranque de *GRUB*, no el anterior que teníamos de XP. ¿Reconocerá el gestor de arranque de grub que en el disco duro existe un Windows XP y nos permitirá arrancar desde el, aparte de arrancar desde Debian? **Pues en este caso sí**.
+
+En el mundillo de los gestores de arranque, es conveniente recordar siempre estas reglas:
+
+ 1. *GRUB* es capaz de arrancar cualquier sistema operativo, por lo que respetará siempre (o al menos lo intentará) cualquier sistema operativo que hubiera en disco duro antes de que se instalara dicho gestor de arranque.
+ 2. Los gestores de arranque de Windows nunca respetarán a Linux. De hecho, el gestor de arranque de Windows solo es capaz de arrancar automáticamente a sistemas operativos Windows, siendo muy complicado conseguir arrancar otros sistemas operativos no de Microsoft. Esto cambia bastante con la EFI, pero no simplifica la situación, ya que el soporte de EFI en LinuX todavia está en un estado temprano.
+ 3. Los gestores de arranque de Windows respetan a los sistemas operativos Windows pero solo a los anteriores a dicho Windows. Es decir, Windows 7 reconoce y respeta a Windows XP, pero al contrario no, ya que cuando se creó el gestor de arranque de XP el sistema operativo Windows 7 no existía, y por lo tanto dicho gestor de arranque de XP no lo reconocerá como un SO legítimo, y por lo tanto se negará a arrancarlo de forma automática. Veremos que 10 *ve* a Windows 7 y a Windows 8.1 pero no a la inversa, ya que se trata de sistemas operativos que no existian cuando ellos fueron lanzados.
