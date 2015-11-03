@@ -14,12 +14,17 @@
 
 * [Ejercicios] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/Ejercicios.md)
 
+
+## Guias de Instalacion
+
+* [Instalación Ubuntu Desktop] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionUbuntuDesktop.md)
+* [Instalacion Ubuntu Server] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Guias/InstalacionUbuntuServer.md)
+
+
 ## Manuales
 
 * [Instalación de Virtualbox] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionVirtualbox.md)
 * [Instalación de QEmu] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionQEmu.md)
-* [Instalación Ubuntu Desktop] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionUbuntuDesktop.md)
-* [Instalacion Ubuntu Server] (https://github.com/aberlanas/ImplantacionSistemasOperativos/blob/master/Unidad_01/InstalacionUbuntuServer.md)
 
 ## Algunos Links de Interés ##
 * [Virtualbox](https://www.virtualbox.org/)
