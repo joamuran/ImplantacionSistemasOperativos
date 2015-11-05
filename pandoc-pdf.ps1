@@ -7,6 +7,7 @@ Write-Host "Procesando Tema 1: ...Ejercicios"
 
 Write-Host "Procesando Tema 2: ...Teoria"
 pandoc --template template-latex.latex  --toc -V fontsize=12pt -o PDFS/Unidad_02_GestoresDeArranque.pdf Unidad_02/GestoresDeArranque.md
+pandoc --template template-latex.latex  --toc -V fontsize=12pt -o PDFS/Unidad_02_UsuariosEnLinuX.pdf Unidad_02/UsuariosEnLinuX.md
 
 Write-Host "Procesando Tema 2: ...Anexos"
 pandoc --template template-latex.latex  --toc -V fontsize=12pt -o PDFS/Unidad_02_Anexos.pdf Unidad_02/Anexo_IRQ.md
