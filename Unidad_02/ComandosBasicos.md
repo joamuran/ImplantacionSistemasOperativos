@@ -3,22 +3,9 @@
 # Comandos en GNU/LinuX
 
 Existen múltiples y variadas formas de obtener ayuda en un sistema Linux.
-1. Muchos comandos poseen una opción para mostrar una ayuda breve acerca de su utilización.
-   Esta opción usualmente es `-h`, `--help` ó `-?`.
-2. El comando `man` formatea y despliega un manual bastante amplio acerca de comandos, formatos de ficheros de configuración, llamados al sistema, etc. Los manuales están disponibles y pueden instalarse en múltiples idiomas. Estos se dividen internamente en secciones. Un mismo objetivo puede estar representado en varias secciones. De no especificarse ninguna sección a través del primer argumento del comando se tomará la primera donde aparezca.
-Ejemplo:
-
- `$ man chmod`
-
-3. Existe un conjunto de comandos integrados (builtin) al bash que no poseen un manual propio. Para ellos se puede emplear el comando help. Si se usa man sólo se mostrará la lista de los comandos integrados. La ayuda que muestra help es un fragmento del manual de bash
-
- `$ man bash`
-
- El cual es muy amplio y resulta incómoda la búsqueda. Algunos de los comandos integrados al bash y que veremos más adelante son: cd, logout, exit, umask, set, help, source, alias, echo, kill y export.
-
-Ejemplo:
- `$ help logout`
-
+ 1. Muchos comandos poseen una opción para mostrar una ayuda breve acerca de su utilización. Esta opción usualmente es `-h`, `--help` ó `-?`.
+ 2. El comando `man` formatea y despliega un manual bastante amplio acerca de comandos, formatos de ficheros de configuración, llamados al sistema, etc. Los manuales están disponibles y pueden instalarse en múltiples idiomas. Estos se dividen internamente en secciones. Un mismo objetivo puede estar representado en varias secciones. De no especificarse ninguna sección a través del primer argumento del comando se tomará la primera donde aparezca.
+ 3. Existe un conjunto de comandos integrados (builtin) al bash que no poseen un manual propio. Para ellos se puede emplear el comando help. Si se usa man sólo se mostrará la lista de los comandos integrados. La ayuda que muestra help es un fragmento del manual de bash
 
 
 ## Comando ls
