@@ -71,3 +71,49 @@ La información asociada a los usuarios en un sistema Linux se guarda en el fich
 y las contraseñas y datos afines en  `/etc/shadow`.
 
 Por su parte la información de los grupos y sus miembros están en `/etc/group`.
+
+
+# Shell
+
+Cuando abrimos una terminal en el modo gráfico o iniciamos sesión en una de las ttys (tal y como hemos visto anteriorment), lo que se muestra al usuario es un intérprete de órdenes, o también llamado *shell*. La shell que tiene predeterminado un usuario lo tenemos en el fichero `/etc/passwd`.
+
+La shell nos muestra siempre cierto *Prompt*, que son los  carácteres que se muestran en una línea de comandos para indicar que está a la espera de órdenes. Éste puede variar dependiendo del intérprete de comandos y suele ser configurable.
+
+Cuando iniciamos sesión con el usuario *violin* en una terminal, lo que se nos muestra es algo parecido a esto:
+
+`violin@debian:~$`
+
+
+¿Que información nos ofrece?
+
+ * El usuario es *violin*
+ * Se encuentra en una máquina cuyo nombre es *debian*
+ * Su directorio actual es : *~*
+ * Se trata de un usuario distinto de **root**
+
+En el caso de que nos hubieramos logado con el usuario **root**, el prompt habría cambiado y tendría este aspecto:
+
+`root@debian:~#`
+
+¿Qué información nos ofrece?
+
+ * El usuario es **root** (id=0)
+ * Se encuentra en una máquina cuyo nombre es *debian*
+ * Su directorio actual es : *~*
+ * Se trata del usuario **root**, ya que tiene un "#" justo antes de la entrada de órdenes.
+
+Este entorno de texto donde nos encontramos y que nos permite introducir comandos es conocido comúnmente como Shell (caparazón).
+
+Este Shell es capaz de interpretar una gran gama de comandos y sentencias. Constituye a su vez un poderoso lenguaje de programación mediante scripts.
+
+GNU-Linux tiene la filosofía de no obligar al usuario a utilizar un programa determinado para cada acción, sino que siempre da la libertad de elegir el programa que queremos utilizar. Lo mismo ocurre con el Shell que vayamos a utilizar para acceder al sistema. El Shell que más se usa es conocido como bash, aunque existen una gran variedad de ellos, como por ejemplo csh, ksh, etc.
+
+## Características de BASH
+
+Algunas características que merece la pena conocer de bash son:
+
+ * **Auto completar** durante la escritura. Al teclear uno o varios caracteres se puede pulsar *TAB* con el objetivo de que en caso de que pueda completarse de forma unívoca un comando, nombre de fichero o una variable (en dependencia del contexto), complete de forma automática (se escriba el resto de la palabra). Si existieran varias posibilidades para completar la palabra, se oirá un sonido y volviendo a pulsar TAB se mostrarán en pantalla todas las posibilidades existentes. En caso de existir muchas posibilidades (por defecto más de 100) se pregunta si se desea mostrarlas todas o no.
+ * **Historial de comandos**. Esta es una facilidad de muchos otros shells que permite el movimiento a través de los últimos N comandos ejecutados, en la sesión actual o en las anteriores. N por defecto es 1000, pero puede modificarse. Para moverse arriba y abajo se suelen utilizar los cursores.
+ * **Poderosas estructuras de control para realizar scripts**. (Procesos por lotes/Guiones). Se pueden utilizar
+instrucciones if, for, while, select, case, etc.
+ * **Definición de funciones y alias para comandos.** Las funciones permiten definir subrutinas programadas usando el lenguaje de bash y los alias, asociar nombres a llamados a comandos con ciertas opciones y argumentos de forma más nemotécnica o abreviada.
