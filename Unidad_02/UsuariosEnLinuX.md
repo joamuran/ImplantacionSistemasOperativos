@@ -72,7 +72,7 @@ y las contraseñas y datos afines en  `/etc/shadow`.
 
 Por su parte la información de los grupos y sus miembros están en `/etc/group`.
 
-
+\newpage
 # Shell
 
 Cuando abrimos una terminal en el modo gráfico o iniciamos sesión en una de las ttys (tal y como hemos visto anteriorment), lo que se muestra al usuario es un intérprete de órdenes, o también llamado *shell*. La shell que tiene predeterminado un usuario lo tenemos en el fichero `/etc/passwd`.
