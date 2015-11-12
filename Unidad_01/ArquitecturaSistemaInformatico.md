@@ -14,6 +14,6 @@ Un sistema informático (SI) es un sistema que permite almacenar y procesar info
 
 Un sistema informático está compuesto por los siguientes elementos:
 
- * *Componente Físico*: Hardware del sistema informático , cables, ordenadores. Estos componentes proporcionan la capacidad y la potencia de calculo del sistema informático.
+ * *Componente Físico*: Hardware del sistema informático , cables, ordenadores. Estos componentes proporcionan la capacidad y la potencia de cálculo del sistema informático.
  * *Componente lógico*: Software del sistema informático, procedimientos y documentación.
  * *Componente humano*: Todas las personas que se encuentran en las fases de un sistema informático: diseño, desarrollo, explotación...
